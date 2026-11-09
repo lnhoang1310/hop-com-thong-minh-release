@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "hop_com_thong_minh",
-    "project_version":    "1",
+    "project_version":    "1.0.7",
     "project_path":       "D:/PROJECT/KHKT/hop_com_thong_minh",
     "idf_path":           "C:/Espressif/frameworks/esp-idf-v5.5.1",
     "build_dir":          "D:/PROJECT/KHKT/hop_com_thong_minh/build",

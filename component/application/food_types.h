@@ -57,6 +57,15 @@ typedef enum {
     FOOD_TIME_EXPIRED,         /* hết quỹ 120 phút, hoặc tuổi >= 24 giờ */
 } food_time_level_t;
 
+/* Trạng thái nhiệt của thức ăn, suy ra từ nhiệt độ không khí trong hộp và tốc độ thay đổi */
+typedef enum {
+    FOOD_THERMAL_UNKNOWN = 0,  /* chưa đủ 3 phút số liệu nhiệt độ */
+    FOOD_THERMAL_HOT,          /* đang nóng: >= 45 °C hoặc đang nóng lên nhanh (vừa cho đồ nóng vào) */
+    FOOD_THERMAL_COOLING,      /* đang nguội: nhiệt độ giảm >= 0,15 °C/phút */
+    FOOD_THERMAL_COOLED,       /* đã nguội: nhiệt độ gần như không đổi */
+    FOOD_THERMAL_COLD,         /* lạnh: < 10 °C (tủ lạnh) */
+} food_thermal_t;
+
 /* Kết quả đánh giá (từ server hoặc tính cục bộ) */
 typedef struct {
     food_level_t      level;       /* mức cuối = max(mức khí, mức thời gian) */
@@ -69,6 +78,8 @@ typedef struct {
     uint32_t valid_ms;         /* kết quả hết hạn sau ngần này ms */
     char     message[24];      /* mô tả ngắn, ASCII không dấu để hiện trên OLED */
     char     model[16];        /* phiên bản thuật toán, vd "rule-0.1" */
+    food_thermal_t thermal;    /* nóng / đang nguội / đã nguội / lạnh */
+    float    temp_slope;       /* tốc độ đổi nhiệt độ, °C/phút (NAN nếu chưa đủ số liệu) */
 } food_safety_t;
 
 /* Phiên đo = một lần cho thức ăn vào hộp */
@@ -112,6 +123,30 @@ static inline const char *food_time_to_code(food_time_level_t t)
     case FOOD_TIME_WARN:    return "warn";
     case FOOD_TIME_EXPIRED: return "expired";
     default:                return "ok";
+    }
+}
+
+/* Chữ ngắn cho OLED (<= 9 ký tự) */
+static inline const char *food_thermal_to_str(food_thermal_t t)
+{
+    switch (t) {
+    case FOOD_THERMAL_HOT:     return "NONG";
+    case FOOD_THERMAL_COOLING: return "NGUOI DAN";
+    case FOOD_THERMAL_COOLED:  return "DA NGUOI";
+    case FOOD_THERMAL_COLD:    return "LANH";
+    default:                   return "";
+    }
+}
+
+/* Mã dùng trong gói tin MQTT */
+static inline const char *food_thermal_to_code(food_thermal_t t)
+{
+    switch (t) {
+    case FOOD_THERMAL_HOT:     return "hot";
+    case FOOD_THERMAL_COOLING: return "cooling";
+    case FOOD_THERMAL_COOLED:  return "cooled";
+    case FOOD_THERMAL_COLD:    return "cold";
+    default:                   return "unknown";
     }
 }
 

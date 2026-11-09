@@ -16,6 +16,9 @@
  *    (vùng trễ 3 điểm: đang ở mức cao thì chỉ hạ khi S < ngưỡng - 3)
  * 5) Mức thời gian (USDA FSIS, FDA Food Code, FSS): quỹ 120 phút, x2 khi > 32 °C
  * 6) Mức cuối = max(mức khí, mức thời gian)
+ * 7) Trạng thái nhiệt (nóng / đang nguội / đã nguội / lạnh) từ nhiệt độ trong hộp và độ dốc
+ *    3 phút gần nhất. Mẫu nền chỉ được lấy khi đã nguội ổn định (hoặc lạnh) >= 2 phút, để hơi
+ *    nóng bốc lên lúc đầu không bị tính là "khí nền" (tối đa chờ 60 phút).
  * Trọng số, T1, T2 lấy từ báo cáo (giả thuyết ban đầu, cần hiệu chỉnh bằng thực nghiệm).
  */
 #include "food_types.h"
@@ -40,6 +43,15 @@ extern "C" {
 
 /* ---- Lấy mẫu nền ---- */
 #define FOOD_BASELINE_SAMPLES  10
+#define FOOD_BASE_STABLE_S     120      /* đã nguội ổn định bao lâu thì bắt đầu lấy nền */
+#define FOOD_BASE_WAIT_MAX_S   3600     /* chờ nguội tối đa, quá thì lấy nền luôn */
+
+/* ---- Trạng thái nhiệt (nhiệt độ KHÔNG KHÍ trong hộp, cần hiệu chỉnh bằng thực nghiệm) ---- */
+#define FOOD_THERMAL_HOT_C          45.0f   /* >= : đang nóng */
+#define FOOD_THERMAL_COLD_C         10.0f   /* <  : lạnh */
+#define FOOD_THERMAL_COOLING_CPM   (-0.15f) /* độ dốc <= : đang nguội (°C/phút) */
+#define FOOD_THERMAL_HEATING_CPM    0.30f   /* độ dốc >= : vừa cho đồ nóng vào, đang nóng lên */
+#define FOOD_THERMAL_WINDOW_MIN     3       /* tính độ dốc trên 3 phút gần nhất */
 
 /* ---- Khoảng chuẩn hoá [lo, hi] cho từng kênh ---- */
 #define FOOD_NH3_LO  1.10f

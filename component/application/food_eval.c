@@ -42,6 +42,19 @@ static uint32_t s_age_ms, s_zone_ms, s_budget_ms;   /* phần lẻ < 1000 ms ch�
 static food_level_t s_prev_gas = FOOD_LEVEL_UNKNOWN; /* cho vùng trễ */
 static uint32_t s_last_save_age;
 
+/* Lịch sử nhiệt độ: 1 mẫu / 30 s, đủ cho cửa sổ FOOD_THERMAL_WINDOW_MIN phút */
+#define T_STEP_MS   30000
+#define T_HIST_N    (FOOD_THERMAL_WINDOW_MIN * 2 + 1)
+static float    s_t_hist[T_HIST_N];
+static uint8_t  s_t_count;              /* số mẫu đã có (tối đa T_HIST_N) */
+static uint8_t  s_t_head;               /* vị trí ghi tiếp theo */
+static uint32_t s_t_last_ms;
+static float    s_t_now = NAN;
+static float    s_slope = NAN;          /* °C/phút */
+static food_thermal_t s_thermal = FOOD_THERMAL_UNKNOWN;
+static uint32_t s_stable_since_ms;      /* bắt đầu đã nguội ổn định / lạnh (0 = chưa) */
+static bool     s_wait_logged;
+
 /* tích luỹ nền */
 static uint8_t  s_base_n;
 static double   s_acc_nh3, s_acc_h2s, s_acc_voc, s_acc_co2;
@@ -108,6 +121,7 @@ void food_eval_new_session(food_group_t food)
     s_has_last = false;
     s_age_ms = s_zone_ms = s_budget_ms = 0;
     s_prev_gas = FOOD_LEVEL_UNKNOWN;
+    s_wait_logged = false;
     reset_baseline();
     ESP_LOGI(TAG, "Phiên mới %08lx, món %s", (unsigned long)s_sess.id, food_group_to_code(s_sess.food));
     food_eval_save();
@@ -127,6 +141,64 @@ void food_eval_get_session(food_session_t *out)
 
 /* Nền đã lấy khi thiếu một kênh (cảm biến lúc đó chưa chạy) mà giờ kênh đó có dữ liệu
  * -> nền không còn đúng, phải lấy lại; nếu không kênh đó bị bỏ qua mãi mãi */
+/* Cập nhật lịch sử nhiệt độ, độ dốc và trạng thái nhiệt */
+static void update_thermal(const food_sensor_data_t *d)
+{
+    if (!(d->valid & SENSOR_VALID_TEMP)) {
+        s_thermal = FOOD_THERMAL_UNKNOWN;
+        s_t_now = NAN;
+        s_stable_since_ms = 0;
+        return;
+    }
+    s_t_now = d->temperature_c;
+    if (s_t_count == 0 || d->timestamp_ms - s_t_last_ms >= T_STEP_MS) {
+        s_t_hist[s_t_head] = s_t_now;
+        s_t_head = (s_t_head + 1) % T_HIST_N;
+        if (s_t_count < T_HIST_N) s_t_count++;
+        s_t_last_ms = d->timestamp_ms;
+        if (s_t_count == T_HIST_N) {
+            float oldest = s_t_hist[s_t_head];                 /* mẫu cách đây 3 phút */
+            float newest = s_t_hist[(s_t_head + T_HIST_N - 1) % T_HIST_N];
+            s_slope = (newest - oldest) / (float)FOOD_THERMAL_WINDOW_MIN;
+        }
+    }
+
+    food_thermal_t th;
+    if (s_t_now < FOOD_THERMAL_COLD_C)                                    th = FOOD_THERMAL_COLD;
+    else if (s_t_now >= FOOD_THERMAL_HOT_C)                               th = FOOD_THERMAL_HOT;
+    else if (isnan(s_slope))                                              th = FOOD_THERMAL_UNKNOWN;
+    else if (s_slope >= FOOD_THERMAL_HEATING_CPM)                         th = FOOD_THERMAL_HOT;
+    else if (s_slope <= FOOD_THERMAL_COOLING_CPM)                         th = FOOD_THERMAL_COOLING;
+    else                                                                  th = FOOD_THERMAL_COOLED;
+    if (th != s_thermal) {
+        ESP_LOGI(TAG, "Trạng thái nhiệt: %s (%.1f °C, %+.2f °C/phút)", food_thermal_to_code(th),
+                 s_t_now, isnan(s_slope) ? 0.0f : s_slope);
+    }
+    s_thermal = th;
+
+    bool settled = th == FOOD_THERMAL_COOLED || th == FOOD_THERMAL_COLD;
+    if (!settled) {
+        s_stable_since_ms = 0;
+    } else if (s_stable_since_ms == 0) {
+        s_stable_since_ms = d->timestamp_ms ? d->timestamp_ms : 1;
+    }
+}
+
+/* Đã đến lúc lấy mẫu nền chưa: thức ăn đã nguội ổn định, hoặc không đo được nhiệt độ,
+ * hoặc đã chờ quá FOOD_BASE_WAIT_MAX_S */
+static bool ready_for_baseline(const food_sensor_data_t *d)
+{
+    if (!(d->valid & SENSOR_VALID_TEMP)) return true;
+    if (s_sess.age_s >= FOOD_BASE_WAIT_MAX_S) {
+        if (!s_wait_logged) {
+            ESP_LOGW(TAG, "Chờ nguội quá %d phút -> lấy nền luôn", FOOD_BASE_WAIT_MAX_S / 60);
+            s_wait_logged = true;
+        }
+        return true;
+    }
+    return s_stable_since_ms && d->timestamp_ms - s_stable_since_ms >= FOOD_BASE_STABLE_S * 1000u;
+}
+
 static bool base_missing_channel(const food_sensor_data_t *d)
 {
     if (!s_sess.base_ready) return false;
@@ -144,6 +216,12 @@ static void accumulate_baseline(const food_sensor_data_t *d)
         reset_baseline();
     }
     if (s_sess.base_ready) return;
+    /* Thức ăn còn nóng / đang nguội: hơi nước và mùi bốc lên nhiều rồi giảm dần, lấy nền lúc này
+     * làm kênh khí (nhất là VOC) bị lệch -> chờ nguội ổn định */
+    if (!ready_for_baseline(d)) {
+        if (s_base_n) reset_baseline();
+        return;
+    }
     /* Chờ MQ làm nóng xong rồi mới lấy nền cho các kênh khí */
     if (!d->mq_warmed_up && (d->valid & (SENSOR_VALID_NH3 | SENSOR_VALID_H2S))) {
         return;   /* có MQ nhưng chưa làm nóng xong -> chưa lấy nền kênh nào */
@@ -202,6 +280,7 @@ void food_eval_update(const food_sensor_data_t *d)
         }
     }
 
+    update_thermal(d);
     accumulate_baseline(d);
 
     if (s_sess.age_s - s_last_save_age >= SAVE_EVERY_S) {
@@ -228,6 +307,8 @@ void food_eval_local(const food_sensor_data_t *d, food_safety_t *out)
     out->timestamp_ms = d ? d->timestamp_ms : 0;
     out->seq = d ? d->seq : 0;
     out->valid_ms = 60000;
+    out->thermal = s_thermal;
+    out->temp_slope = s_slope;
 
     /* --- Mức thời gian --- */
     if (s_sess.budget_s >= FOOD_BUDGET_EXPIRED_S || s_sess.age_s >= FOOD_AGE_EXPIRED_S) {
@@ -293,6 +374,7 @@ void food_eval_local(const food_sensor_data_t *d, food_safety_t *out)
     else if (out->gas_level == FOOD_LEVEL_SAFE)         msg = "Chua thay bat thuong";
     else if (d && !d->mq_warmed_up)                     msg = "MQ dang lam nong";
     else if (s_sess.base_ready)                         msg = "Thieu du lieu cam bien";
+    else if (d && !ready_for_baseline(d))               msg = "Cho nguoi de lay nen";
     else                                                msg = NULL;
     if (msg) {
         strlcpy(out->message, msg, sizeof(out->message));

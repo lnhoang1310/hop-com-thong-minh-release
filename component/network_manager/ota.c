@@ -97,7 +97,7 @@ esp_err_t ota_update_begin(size_t total_size, const char *source)
     s_hdr_checked = false;
     s_handle = 0;
     s_state = OTA_STATE_RUNNING;
-    set_msg("Dang nhan file");
+    set_msg("Dang cap nhat");
     esp_err_t err = esp_ota_begin(s_part, OTA_WITH_SEQUENTIAL_WRITES, &s_handle);
     if (err != ESP_OK) {
         fail(esp_err_to_name(err), "Loi bat dau OTA");
@@ -156,7 +156,7 @@ esp_err_t ota_update_write(const void *data, size_t len)
         return err;
     }
     s_written += len;
-    set_msg("Dang ghi firmware");
+    set_msg("Dang cap nhat");
     return ESP_OK;
 }
 

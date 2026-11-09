@@ -55,7 +55,7 @@
 #define MQ137_CURVE_A 102.2f
 #define MQ137_CURVE_B (-2.473f)
 
-#define MQ_WARMUP_TIME_S   100     /* thời gian làm nóng cảm biến MQ khi bật nguồn */
+#define MQ_WARMUP_TIME_S   200     /* thời gian làm nóng cảm biến MQ khi bật nguồn */
 
 /* ============================== Thời gian ============================== */
 #define SENSOR_READ_PERIOD_MS  1000
@@ -63,7 +63,7 @@
 #define CLOUD_RESULT_TIMEOUT_MS 60000  /* kết quả server quá cũ -> dùng đánh giá cục bộ */
 
 /* ============================== WiFi ============================== */
-#define WIFI_AP_SSID_PREFIX   "HopCom"   /* SSID: HopCom-XXXX (4 hex cuối MAC) */
+#define WIFI_AP_SSID_PREFIX   "HopComThongMinh"   /* SSID: HopCom-XXXX (4 hex cuối MAC) */
 #define WIFI_AP_PASSWORD      ""         /* "" = mạng mở; >= 8 ký tự = WPA2 */
 #define WIFI_AP_CHANNEL       6
 #define WIFI_AP_MAX_CONN      4

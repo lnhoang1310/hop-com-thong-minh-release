@@ -66,6 +66,8 @@ char *cloud_protocol_build_telemetry(const food_sensor_data_t *d, const food_ses
     cJSON_AddStringToObject(root, "time_level", food_time_to_code(r->time_level));
     cJSON_AddNumberToObject(root, "score", r->score);
     cJSON_AddStringToObject(root, "msg", r->message);
+    cJSON_AddStringToObject(root, "thermal", food_thermal_to_code(r->thermal));
+    if (!isnan(r->temp_slope)) cJSON_AddNumberToObject(root, "slope", round_to(r->temp_slope, 2));
     return finish(root);
 }
 

@@ -12,7 +12,8 @@
  *  telemetry:
  *   {"food":"com","age_s":720,"budget_s":300,
  *    "t":28.5,"rh":67.1,"co2":830,"voc":29876,"nh3":0.912,"h2s":0.975,
- *    "level":"low","gas_level":"low","time_level":"ok","score":18,"msg":"Chua thay bat thuong"}
+ *    "level":"low","gas_level":"low","time_level":"ok","score":18,"msg":"Chua thay bat thuong",
+ *    "thermal":"cooling","slope":-0.42}
  *   - food: "com" | "thit" | "ca" | "canh" | "trung"
  *   - age_s: tuổi phiên (s); budget_s: quỹ thời gian đã dùng (s, x2 khi > 32 °C), 3600 cảnh báo, 7200 hết
  *   - t (°C), rh (%), co2 (ppm) từ SCD40; voc = SRAW của SGP40 (VOC càng nhiều số càng NHỎ)
@@ -20,6 +21,7 @@
  *   - Cảm biến nào không đo được thì BỎ trường đó
  *   - level, gas_level: "invalid" | "low" | "check" | "strong";  time_level: "ok" | "warn" | "expired"
  *   - score: chỉ số khí S 0..100;  msg: ASCII không dấu (dòng thông báo trên OLED)
+ *   - thermal: "hot" | "cooling" | "cooled" | "cold" | "unknown";  slope: °C/phút (3 phút gần nhất)
  *   - Thuật toán đánh giá (rule-0.1): food_eval.h / food_eval.c
  *
  *  cmd:

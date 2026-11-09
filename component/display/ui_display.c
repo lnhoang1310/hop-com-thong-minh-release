@@ -146,13 +146,17 @@ static void page_overview(const ui_model_t *m)
 
     oled_gfx_text_aligned(0, 44, OLED_WIDTH, s->message, 1, OLED_ALIGN_CENTER, OLED_COLOR_WHITE);
 
+    /* Dòng cuối: nhiệt độ + trạng thái nhiệt (NONG / NGUOI DAN / DA NGUOI / LANH), phải: server */
     if (m->data.valid & SENSOR_VALID_TEMP) {
-        snprintf(buf, sizeof(buf), "%.1f" DEG "C %.0f%%", m->data.temperature_c, m->data.humidity_rh);
+        const char *th = food_thermal_to_str(s->thermal);
+        if (th[0]) snprintf(buf, sizeof(buf), "%.0f" DEG "C %s", m->data.temperature_c, th);
+        else       snprintf(buf, sizeof(buf), "%.1f" DEG "C %.0f%%", m->data.temperature_c, m->data.humidity_rh);
     } else {
-        snprintf(buf, sizeof(buf), "--" DEG "C --%%");
+        snprintf(buf, sizeof(buf), "--" DEG "C");
     }
     oled_gfx_text(0, 53, buf, 1, OLED_COLOR_WHITE);
-    oled_gfx_text_aligned(70, 53, 58, m->cloud_online ? "Online" : "Offline", 1, OLED_ALIGN_RIGHT, OLED_COLOR_WHITE);
+    oled_gfx_text_aligned(92, 53, 36, m->cloud_online ? "S:OK" : "S:--", 1,
+                          OLED_ALIGN_RIGHT, OLED_COLOR_WHITE);
 }
 
 /* ---------------- Trang 1: Khí (thay đổi so với nền) ---------------- */
