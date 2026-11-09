@@ -1,0 +1,253 @@
+Command: C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Espressif\frameworks\esp-idf-v5.5.1\tools/idf_monitor.py -p COM27 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 D:\PROJECT\KHKT\hop_com_thong_minh\build\hop_com_thong_minh.elf D:\PROJECT\KHKT\hop_com_thong_minh\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Espressif\frameworks\esp-idf-v5.5.1\tools\idf.py' '-p' 'COM27'
+[0;32mI (601) wifi:config nano formatting: disabled[0m
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x28 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x42008c9b
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x1658
+load:0x403c8700,len:0xd98
+load:0x403cb700,len:0x33a4
+entry 0x403c899c
+[0;32mI (24) boot: ESP-IDF v5.5.1-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Nov  9 2026 23:52:15[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (28) boot: efuse block revision: v1.4[0m
+[0;32mI (32) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (36) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32s3: SPI Flash Size : 4MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (48) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 otadata          OTA data         01 00 0000f000 00002000[0m
+[0;32mI (70) boot:  2 phy_init         RF data          01 01 00011000 00001000[0m
+[0;32mI (76) boot:  3 ota_0            OTA app          00 10 00020000 001a9000[0m
+[0;32mI (83) boot:  4 ota_1            OTA app          00 11 001d0000 001a9000[0m
+[0;32mI (89) boot: End of partition table[0m
+[0;32mI (92) esp_image: segment 0: paddr=00020020 vaddr=3c0d0020 size=4596ch (285036) map[0m
+[0;32mI (147) esp_image: segment 1: paddr=00065994 vaddr=3fc9af00 size=04b34h ( 19252) load[0m
+[0;32mI (151) esp_image: segment 2: paddr=0006a4d0 vaddr=40374000 size=05b48h ( 23368) load[0m
+[0;32mI (156) esp_image: segment 3: paddr=00070020 vaddr=42000020 size=c6474h (812148) map[0m
+[0;32mI (294) esp_image: segment 4: paddr=0013649c vaddr=40379b48 size=112fch ( 70396) load[0m
+[0;32mI (309) esp_image: segment 5: paddr=001477a0 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (317) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (318) boot: Disabling RNG early entropy source...[0m
+[0;32mI (328) cpu_start: Multicore app[0m
+[0;32mI (337) cpu_start: Pro cpu start user code[0m
+[0;32mI (337) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (337) app_init: Application information:[0m
+[0;32mI (337) app_init: Project name:     hop_com_thong_minh[0m
+[0;32mI (342) app_init: App version:      1[0m
+[0;32mI (345) app_init: Compile time:     Nov  9 2026 23:51:57[0m
+[0;32mI (350) app_init: ELF file SHA256:  53707cbad...[0m
+[0;32mI (355) app_init: ESP-IDF:          v5.5.1-dirty[0m
+[0;32mI (359) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (363) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (367) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (371) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (377) heap_init: At 3FCA5450 len 000442C0 (272 KiB): RAM[0m
+[0;32mI (382) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (387) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (392) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (399) spi_flash: detected chip: generic[0m
+[0;32mI (401) spi_flash: flash io: dio[0m
+[0;32mI (405) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (411) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (418) main_task: Started on CPU0[0m
+[0;32mI (428) main_task: Calling app_main()[0m
+[0;32mI (428) MAIN: === Hop com thong minh khoi dong ===[0m
+[0;32mI (438) I2C:   0x3C OLED   OK[0m
+[0;32mI (438) I2C:   0x62 SCD40  OK[0m
+[0;32mI (438) I2C:   0x59 SGP40  OK[0m
+[0;32mI (548) OLED: OLED SH1106 sẵn sàng[0m
+[0;32mI (548) pp: pp rom version: e7ae62f[0m
+[0;32mI (548) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (558) wifi:wifi driver task: 3fceda78, prio:23, stack:6656, core=0[0m
+[0;32mI (558) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (558) wifi:wifi certification version: v7.0[0m
+[0;32mI (558) wifi:config NVS flash: enabled[0m
+[0;32mI (558) wifi:config nano formatting: disabled[0m
+[0;32mI (568) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (568) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (578) wifi:Init management short buffer num: 32[0m
+[0;32mI (578) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (578) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (588) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (588) wifi:Init static rx buffer num: 10[0m
+[0;32mI (598) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (598) wifi_init: rx ba win: 6[0m
+[0;32mI (598) wifi_init: accept mbox: 6[0m
+[0;32mI (608) wifi_init: tcpip mbox: 32[0m
+[0;32mI (608) wifi_init: udp mbox: 6[0m
+[0;32mI (608) wifi_init: tcp mbox: 6[0m
+[0;32mI (618) wifi_init: tcp tx win: 5760[0m
+[0;32mI (618) wifi_init: tcp rx win: 5760[0m
+[0;32mI (618) wifi_init: tcp mss: 1440[0m
+[0;32mI (618) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (628) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (628) WIFI: Chưa có mạng WiFi -> bật AP cấu hình[0m
+[0;32mI (638) phy_init: phy_version 701,f4f1da3a,Mar  3 2025,15:50:10[0m
+[0;33mW (638) phy_init: failed to load RF calibration data (0x1102), falling back to full calibration[0m
+[0;32mI (678) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(2)[0m
+[0;32mI (688) wifi:mode : sta (90:da:72:75:f5:2c)[0m
+[0;32mI (688) wifi:enable tsf[0m
+[0;32mI (698) WIFI: Công suất phát WiFi tối đa 8.50 dBm[0m
+[0;32mI (698) wifi:mode : sta (90:da:72:75:f5:2c) + softAP (90:da:72:75:f5:2d)[0m
+[0;32mI (698) wifi:Total power save buffer number: 16[0m
+[0;32mI (698) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (708) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (708) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (718) wifi:Total power save buffer number: 16[0m
+[0;32mI (728) wifi:Set ps type: 0, coexist: 0[0m
+
+[0;32mI (728) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (738) DNS: DNS captive đang chạy[0m
+[0;32mI (738) PORTAL: Web cấu hình chạy tại http://192.168.4.1/[0m
+[0;32mI (748) WIFI: AP cấu hình 'HopCom-F52D' đã bật, truy cập http://192.168.4.1[0m
+[1;31mE (748) i2c.master: I2C transaction unexpected nack detected[0m
+[1;31mE (758) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[1;31mE (768) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;32mI (1318) SCD41: SCD41 OK, serial 0x73CB59073BD3[0m
+[0;32mI (1318) SGP40: SGP40 OK, serial 0x000006F0219D[0m
+[0;32mI (1648) MQ: MQ136 sẵn sàng (GPIO 2, kênh 1, R0=20.00 kOhm)[0m
+[0;32mI (1648) MQ: MQ137 sẵn sàng (GPIO 1, kênh 0, R0=20.00 kOhm)[0m
+[0;32mI (1648) SENSOR: Cảm biến: SCD40(CO2+T+RH)=1 SGP40=1 MQ136=1 MQ137=1[0m
+[0;32mI (1648) EVAL: Phiên mới af79cbc7, món com[0m
+[0;32mI (1658) CLOUD: MQTT: mqtt://broker.hivemq.com:1883, client hc-90da7275f52c, topic hopcom-khkt2026/...[0m
+[0;32mI (1668) OTA: Đang chạy hop_com_thong_minh v1 trên phân vùng ota_0[0m
+[0;32mI (1668) MAIN: Khởi động xong[0m
+[0;32mI (1678) main_task: Returned from app_main()[0m
+[0;32mI (3328) FSM: BOOT -> WARMUP[0m
+[0;32mI (5708) FSM: T=0.0C RH=0% CO2=0 NH3=13.868 H2S=18.575 VOC=31573 -> invalid S=0 [offline][0m
+[0;32mI (10708) FSM: T=28.4C RH=50% CO2=714 NH3=14.168 H2S=18.493 VOC=31771 -> invalid S=0 [offline][0m
+[0;32mI (15708) FSM: T=28.2C RH=51% CO2=735 NH3=13.609 H2S=18.253 VOC=31805 -> invalid S=0 [offline][0m
+[0;32mI (20708) FSM: T=28.0C RH=51% CO2=727 NH3=14.583 H2S=18.824 VOC=31822 -> invalid S=0 [offline][0m
+[0;32mI (25708) FSM: T=27.7C RH=52% CO2=701 NH3=14.896 H2S=19.137 VOC=31843 -> invalid S=0 [offline][0m
+[0;32mI (25858) wifi:new:<6,0>, old:<6,1>, ap:<6,0>, sta:<0,0>, prof:6, snd_ch_cfg:0x0[0m
+[0;32mI (25858) wifi:station: f6:ae:77:cc:93:dc join, AID=1, bgn, 20[0m
+[0;32mI (25858) WIFI: AP: 1 thiết bị đang kết nối[0m
+[0;32mI (25968) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+[0;32mI (28748) wifi:<ba-add>idx:2 (ifx:1, f6:ae:77:cc:93:dc), tid:0, ssn:0, winSize:64[0m
+[0;33mW (28908) httpd_uri: httpd_uri: URI '/hotspot-detect.html' not found[0m
+[0;32mI (29038) wifi:<ba-add>idx:3 (ifx:1, f6:ae:77:cc:93:dc), tid:1, ssn:0, winSize:64[0m
+[0;33mW (29038) httpd_uri: httpd_uri: URI '/cp.a?rand=1930' not found[0m
+[0;33mW (29048) httpd_uri: httpd_uri: URI '/generate_204?rand=1009' not found[0m
+[0;33mW (30548) httpd_uri: httpd_uri: URI '/cp.a?rand=9745' not found[0m
+[0;33mW (30558) httpd_uri: httpd_uri: URI '/generate_204?rand=5323' not found[0m
+[0;32mI (30708) FSM: T=27.5C RH=52% CO2=699 NH3=14.136 H2S=19.180 VOC=31842 -> invalid S=0 [offline][0m
+[0;33mW (31578) httpd_uri: httpd_uri: URI '/hotspot-detect.html' not found[0m
+[0;33mW (31658) httpd_uri: httpd_uri: URI '/hotspot-detect.html' not found[0m
+[0;33mW (31798) httpd_uri: httpd_uri: URI '/generate_204?rand=1019' not found[0m
+[0;33mW (31818) httpd_uri: httpd_uri: URI '/cp.a?rand=3169' not found[0m
+[0;33mW (31838) httpd_uri: httpd_uri: URI '/hotspot-detect.html' not found[0m
+[0;33mW (34708) httpd_uri: httpd_uri: URI '/generate_204?rand=6611' not found[0m
+[0;33mW (34778) httpd_uri: httpd_uri: URI '/cp.a?rand=9874' not found[0m
+[0;32mI (35708) FSM: T=27.3C RH=53% CO2=704 NH3=14.756 H2S=19.022 VOC=31816 -> invalid S=0 [offline][0m
+[0;33mW (35818) httpd_uri: httpd_uri: URI '/cp.a?rand=6286' not found[0m
+[0;33mW (35828) httpd_uri: httpd_uri: URI '/generate_204?rand=3477' not found[0m
+[0;33mW (36878) httpd_uri: httpd_uri: URI '/generate_204?rand=3833' not found[0m
+[0;33mW (36878) httpd_uri: httpd_uri: URI '/cp.a?rand=2556' not found[0m
+[0;33mW (37958) httpd_uri: httpd_uri: URI '/cp.a?rand=5010' not found[0m
+[0;33mW (37968) httpd_uri: httpd_uri: URI '/generate_204?rand=2418' not found[0m
+[0;33mW (39118) httpd_uri: httpd_uri: URI '/cp.a?rand=8430' not found[0m
+[0;33mW (39118) httpd_uri: httpd_uri: URI '/generate_204?rand=3001' not found[0m
+[0;33mW (40278) httpd_uri: httpd_uri: URI '/cp.a?rand=5048' not found[0m
+[0;33mW (40288) httpd_uri: httpd_uri: URI '/generate_204?rand=4662' not found[0m
+[0;32mI (40708) FSM: T=27.1C RH=53% CO2=707 NH3=14.950 H2S=18.740 VOC=31831 -> invalid S=0 [offline][0m
+[0;32mI (40878) WIFI: Thử kết nối mạng mới 'Lâm Hoàng'[0m
+[0;33mW (40878) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;33mW (41368) httpd_uri: httpd_uri: URI '/generate_204?rand=6720' not found[0m
+[0;33mW (41388) httpd_uri: httpd_uri: URI '/cp.a?rand=7337' not found[0m
+[0;33mW (43358) httpd_uri: httpd_uri: URI '/cp.a?rand=2810' not found[0m
+[0;32mI (43858) wifi:new:<6,0>, old:<6,0>, ap:<6,0>, sta:<6,0>, prof:6, snd_ch_cfg:0x0[0m
+[0;32mI (43858) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (43868) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (43878) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (43938) wifi:connected with Lâm Hoàng, aid = 1, channel 6, BW20, bssid = 2e:94:a0:e4:d4:8d[0m
+[0;32mI (43938) wifi:security: WPA2-PSK, phy: bgn, rssi: -64[0m
+[0;32mI (43938) wifi:pm start, type: 0[0m
+
+[0;32mI (43938) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (43948) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (44038) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;33mW (44328) httpd_uri: httpd_uri: URI '/generate_204?rand=8434' not found[0m
+[0;33mW (44898) httpd_uri: httpd_uri: URI '/cp.a?rand=4072' not found[0m
+[0;33mW (44908) httpd_uri: httpd_uri: URI '/generate_204?rand=2318' not found[0m
+[0;32mI (45468) esp_netif_handlers: sta ip: 172.20.10.2, mask: 255.255.255.240, gw: 172.20.10.1[0m
+[0;32mI (45468) WIFI: Đã kết nối 'Lâm Hoàng', IP 172.20.10.2, RSSI -65[0m
+[0;32mI (45468) CLOUD: Kết nối broker mqtt://broker.hivemq.com:1883[0m
+[0;32mI (45478) wifi:<ba-add>idx:0 (ifx:0, 2e:94:a0:e4:d4:8d), tid:0, ssn:2, winSize:64[0m
+[0;32mI (45708) FSM: T=26.9C RH=54% CO2=707 NH3=14.600 H2S=18.740 VOC=31849 -> invalid S=0 [offline][0m
+[0;33mW (45968) httpd_uri: httpd_uri: URI '/cp.a?rand=2625' not found[0m
+[0;33mW (45968) httpd_uri: httpd_uri: URI '/generate_204?rand=5733' not found[0m
+[0;33mW (47098) httpd_uri: httpd_uri: URI '/cp.a?rand=1068' not found[0m
+[0;33mW (47098) httpd_uri: httpd_uri: URI '/generate_204?rand=7651' not found[0m
+[0;33mW (48208) httpd_uri: httpd_uri: URI '/cp.a?rand=3986' not found[0m
+[0;33mW (48218) httpd_uri: httpd_uri: URI '/generate_204?rand=7045' not found[0m
+[0;33mW (49338) httpd_uri: httpd_uri: URI '/cp.a?rand=8572' not found[0m
+[0;33mW (49338) httpd_uri: httpd_uri: URI '/generate_204?rand=6119' not found[0m
+[0;33mW (50478) httpd_uri: httpd_uri: URI '/cp.a?rand=9919' not found[0m
+[0;33mW (50488) httpd_uri: httpd_uri: URI '/generate_204?rand=7057' not found[0m
+[0;32mI (50708) FSM: T=26.8C RH=54% CO2=704 NH3=14.703 H2S=18.810 VOC=31859 -> invalid S=0 [offline][0m
+[0;33mW (51618) httpd_uri: httpd_uri: URI '/cp.a?rand=4286' not found[0m
+[0;33mW (51618) httpd_uri: httpd_uri: URI '/generate_204?rand=8609' not found[0m
+[0;33mW (52698) httpd_uri: httpd_uri: URI '/cp.a?rand=7058' not found[0m
+[0;33mW (52698) httpd_uri: httpd_uri: URI '/generate_204?rand=3348' not found[0m
+[0;33mW (53738) httpd_uri: httpd_uri: URI '/cp.a?rand=9051' not found[0m
+[0;33mW (53748) httpd_uri: httpd_uri: URI '/generate_204?rand=2006' not found[0m
+[0;32mI (54698) CLOUD: Đã kết nối broker mqtt://broker.hivemq.com:1883[0m
+[0;33mW (54868) httpd_uri: httpd_uri: URI '/cp.a?rand=2274' not found[0m
+[0;33mW (54878) httpd_uri: httpd_uri: URI '/generate_204?rand=5680' not found[0m
+[0;32mI (55708) FSM: T=26.6C RH=55% CO2=702 NH3=15.085 H2S=18.936 VOC=31863 -> invalid S=0 [da gui][0m
+[0;33mW (55908) httpd_uri: httpd_uri: URI '/cp.a?rand=6030' not found[0m
+[0;33mW (55918) httpd_uri: httpd_uri: URI '/generate_204?rand=693' not found[0m
+[0;33mW (56968) httpd_uri: httpd_uri: URI '/cp.a?rand=1230' not found[0m
+[0;33mW (56978) httpd_uri: httpd_uri: URI '/generate_204?rand=1890' not found[0m
+[0;33mW (58018) httpd_uri: httpd_uri: URI '/cp.a?rand=5401' not found[0m
+[0;33mW (58028) httpd_uri: httpd_uri: URI '/generate_204?rand=896' not found[0m
+[0;33mW (58948) httpd_txrx: httpd_sock_err: error in recv : 104[0m
+[0;33mW (59948) httpd_txrx: httpd_sock_err: error in recv : 104[0m
+[0;33mW (59948) httpd_txrx: httpd_sock_err: error in recv : 104[0m
+[0;33mW (59948) httpd_txrx: httpd_sock_err: error in recv : 104[0m
+[0;32mI (60708) FSM: T=26.5C RH=55% CO2=703 NH3=14.826 H2S=18.253 VOC=31843 -> invalid S=0 [da gui][0m
+[0;32mI (60908) FSM: WARMUP -> SELECT_FOOD[0m
+[0;32mI (65708) FSM: T=26.4C RH=55% CO2=704 NH3=14.634 H2S=18.979 VOC=31834 -> invalid S=0 [da gui][0m
+[0;32mI (70708) EVAL: Nền: NH3 14.800 H2S 18.792 VOC 31839 CO2 703[0m
+[0;32mI (70718) FSM: T=26.2C RH=56% CO2=704 NH3=14.634 H2S=18.589 VOC=31852 -> low S=0 [da gui][0m
+[0;32mI (76708) FSM: T=26.0C RH=56% CO2=703 NH3=15.013 H2S=19.748 VOC=31853 -> low S=0 [da gui][0m
+[0;32mI (82708) FSM: T=25.9C RH=57% CO2=703 NH3=14.843 H2S=19.238 VOC=31868 -> low S=0 [da gui][0m
+[0;32mI (87708) FSM: T=25.8C RH=57% CO2=703 NH3=14.923 H2S=19.036 VOC=31875 -> low S=0 [da gui][0m
+[0;32mI (92708) FSM: T=25.8C RH=57% CO2=704 NH3=14.773 H2S=19.490 VOC=31873 -> low S=0 [da gui][0m
+[0;32mI (97708) FSM: T=25.7C RH=57% CO2=703 NH3=15.288 H2S=19.490 VOC=31848 -> low S=0 [da gui][0m
+[0;32mI (102708) FSM: T=25.6C RH=58% CO2=703 NH3=15.031 H2S=19.238 VOC=31860 -> low S=0 [da gui][0m
+[0;32mI (104538) FSM: Nút OK: nhan[0m
+[0;32mI (104538) EVAL: Phiên mới 2145913c, món com[0m
+[0;32mI (104548) FSM: Chọn món: com (phiên mới)[0m
+[0;32mI (104548) FSM: SELECT_FOOD -> MONITOR[0m
+[0;32mI (104708) FSM: Mức: low -> invalid[0m
+[0;32mI (108708) FSM: T=25.5C RH=58% CO2=701 NH3=15.345 H2S=19.253 VOC=31882 -> invalid S=0 [da gui][0m
+[0;32mI (113708) EVAL: Nền: NH3 15.198 H2S 19.597 VOC 31889 CO2 700[0m
+[0;32mI (113718) FSM: Mức: invalid -> low[0m
+[0;32mI (113728) FSM: T=25.5C RH=58% CO2=699 NH3=15.149 H2S=19.580 VOC=31911 -> low S=0 [da gui][0m
+[0;32mI (119708) FSM: T=25.4C RH=58% CO2=698 NH3=14.995 H2S=20.108 VOC=31914 -> low S=0 [da gui][0m
+[0;32mI (124708) FSM: T=25.3C RH=58% CO2=697 NH3=15.574 H2S=18.965 VOC=31905 -> low S=0 [da gui][0m
+[0;33mW (124748) httpd_txrx: httpd_sock_err: error in recv : 104[0m
+[0;32mI (126378) wifi:station: f6:ae:77:cc:93:dc leave, AID = 1, reason = 8, bss_flags is 33721459, bss:0x3fca8140[0m
+[0;32mI (126378) wifi:new:<6,0>, old:<6,0>, ap:<6,0>, sta:<6,0>, prof:6, snd_ch_cfg:0x0[0m
+[0;32mI (126378) wifi:<ba-del>idx:2, tid:0[0m
+[0;32mI (126388) wifi:<ba-del>idx:3, tid:1[0m
+[0;32mI (126388) wifi:new:<6,2>, old:<6,0>, ap:<6,2>, sta:<6,0>, prof:6, snd_ch_cfg:0x0[0m
+[0;32mI (126398) WIFI: AP: 0 thiết bị đang kết nối[0m
+[0;32mI (129708) FSM: T=25.3C RH=58% CO2=697 NH3=15.497 H2S=19.238 VOC=31896 -> low S=0 [da gui][0m
+[0;32mI (134708) FSM: T=25.3C RH=58% CO2=697 NH3=15.140 H2S=19.282 VOC=31891 -> low S=0 [da gui][0m
+[0;32mI (139708) FSM: T=25.2C RH=58% CO2=696 NH3=15.104 H2S=18.768 VOC=31878 -> low S=0 [da gui][0m
+[0;32mI (144708) FSM: T=25.2C RH=58% CO2=696 NH3=15.430 H2S=19.505 VOC=31889 -> low S=0 [da gui][0m
+[0;32mI (149708) FSM: T=25.2C RH=59% CO2=695 NH3=15.430 H2S=20.268 VOC=31912 -> low S=0 [da gui][0m
+[0;32mI (154708) FSM: T=25.2C RH=59% CO2=694 NH3=15.186 H2S=19.535 VOC=31929 -> low S=0 [da gui][0m
+[0;32mI (159708) FSM: T=25.2C RH=59% CO2=692 NH3=15.373 H2S=19.520 VOC=31921 -> low S=0 [da gui][0m
+[0;32mI (164708) FSM: T=25.2C RH=59% CO2=691 NH3=15.326 H2S=19.475 VOC=31916 -> low S=0 [da gui][0m
+[0;32mI (169708) FSM: T=25.1C RH=59% CO2=688 NH3=15.468 H2S=19.966 VOC=31912 -> low S=0 [da gui][0m
+[0;32mI (174708) FSM: T=25.1C RH=59% CO2=685 NH3=15.555 H2S=20.971 VOC=31894 -> low S=0 [da gui][0m

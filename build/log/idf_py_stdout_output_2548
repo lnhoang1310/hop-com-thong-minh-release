@@ -1,0 +1,274 @@
+Command: C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Espressif\frameworks\esp-idf-v5.5.1\tools/idf_monitor.py -p COM27 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 D:\PROJECT\KHKT\hop_com_thong_minh\build\hop_com_thong_minh.elf D:\PROJECT\KHKT\hop_com_thong_minh\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Espressif\frameworks\esp-idf-v5.5.1\tools\idf.py' '-p' 'COM27'
+[0;32mI (120) esp_image: segment 1: paddr=0003dce0 vaddr=3fc9ae00 sizeESP-ROM:esp32s3-20210327[0m
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x28 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4037a026
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x158c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f34
+entry 0x403c8924
+[0;32mI (24) boot: ESP-IDF v5.5.1-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Nov  8 2026 08:50:24[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (28) boot: efuse block revision: v1.4[0m
+[0;32mI (32) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (36) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32s3: SPI Flash Size : 4MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (48) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (70) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3c0d0020 size=2dcb8h (187576) map[0m
+[0;32mI (120) esp_image: segment 1: paddr=0003dce0 vaddr=3fc9ae00 size=02338h (  9016) load[0m
+[0;32mI (122) esp_image: segment 2: paddr=00040020 vaddr=42000020 size=c08e0h (788704) map[0m
+[0;32mI (263) esp_image: segment 3: paddr=00100908 vaddr=3fc9d138 size=027fch ( 10236) load[0m
+[0;32mI (265) esp_image: segment 4: paddr=0010310c vaddr=40374000 size=16d94h ( 93588) load[0m
+[0;32mI (287) esp_image: segment 5: paddr=00119ea8 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (296) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (296) boot: Disabling RNG early entropy source...[0m
+[0;32mI (306) cpu_start: Multicore app[0m
+[0;32mI (315) cpu_start: Pro cpu start user code[0m
+[0;32mI (316) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (316) app_init: Application information:[0m
+[0;32mI (316) app_init: Project name:     hop_com_thong_minh[0m
+[0;32mI (320) app_init: App version:      1[0m
+[0;32mI (324) app_init: Compile time:     Nov  8 2026 08:50:05[0m
+[0;32mI (329) app_init: ELF file SHA256:  78f516d09...[0m
+[0;32mI (333) app_init: ESP-IDF:          v5.5.1-dirty[0m
+[0;32mI (338) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (341) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (345) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (349) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (356) heap_init: At 3FCA4F10 len 00044800 (274 KiB): RAM[0m
+[0;32mI (361) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (366) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (371) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (377) spi_flash: detected chip: generic[0m
+[0;32mI (380) spi_flash: flash io: dio[0m
+[0;32mI (384) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (389) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (396) main_task: Started on CPU0[0m
+[0;32mI (406) main_task: Calling app_main()[0m
+[0;32mI (406) MAIN: === Hop com thong minh khoi dong ===[0m
+[0;32mI (426) I2C:   0x3C OLED   OK[0m
+[0;32mI (426) I2C:   0x62 SCD40  OK[0m
+[0;32mI (426) I2C:   0x59 SGP40  OK[0m
+[0;32mI (456) OLED: OLED SH1106 sẵn sàng[0m
+[0;32mI (1006) SCD41: SCD41 OK, serial 0x73CB59073BD3[0m
+[0;32mI (1006) SGP40: SGP40 OK, serial 0x000006F0219D[0m
+[0;32mI (1336) MQ: MQ136: R0 từ NVS = 0.16 kOhm[0m
+[0;32mI (1336) MQ: MQ136 sẵn sàng (GPIO 2, kênh 1, R0=0.16 kOhm)[0m
+[0;32mI (1336) MQ: MQ137: R0 từ NVS = 0.16 kOhm[0m
+[0;32mI (1336) MQ: MQ137 sẵn sàng (GPIO 1, kênh 0, R0=0.16 kOhm)[0m
+[0;32mI (1346) SENSOR: Cảm biến: SCD40(CO2+T+RH)=1 SGP40=1 MQ136=1 MQ137=1[0m
+[0;32mI (1346) pp: pp rom version: e7ae62f[0m
+[0;32mI (1356) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (1366) wifi:wifi driver task: 3fcee01c, prio:23, stack:6656, core=0[0m
+[0;32mI (1376) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (1376) wifi:wifi certification version: v7.0[0m
+[0;32mI (1376) wifi:config NVS flash: enabled[0m
+[0;32mI (1376) wifi:config nano formatting: disabled[0m
+[0;32mI (1376) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (1386) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (1386) wifi:Init management short buffer num: 32[0m
+[0;32mI (1386) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (1396) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (1396) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (1406) wifi:Init static rx buffer num: 10[0m
+[0;32mI (1406) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (1416) wifi_init: rx ba win: 6[0m
+[0;32mI (1416) wifi_init: accept mbox: 6[0m
+[0;32mI (1416) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1416) wifi_init: udp mbox: 6[0m
+[0;32mI (1426) wifi_init: tcp mbox: 6[0m
+[0;32mI (1426) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1426) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1436) wifi_init: tcp mss: 1440[0m
+[0;32mI (1436) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1436) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1446) WIFI: Mạng đã lưu: 'Lâm Hoàng'[0m
+[0;33mW (1446) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (1456) phy_init: phy_version 701,f4f1da3a,Mar  3 2025,15:50:10[0m
+[0;32mI (1496) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (1546) wifi:mode : sta (90:da:72:75:f5:2c)[0m
+[0;32mI (1546) wifi:enable tsf[0m
+[0;32mI (1556) EVAL: Khôi phục phiên e7ce68f6 (com), tuổi 309s[0m
+[0;32mI (1556) CLOUD: MQTT: mqtt://broker.hivemq.com:1883, client hc-90da7275f52c, topic hopcom-khkt2026/...[0m
+[0;32mI (1556) MAIN: Khởi động xong[0m
+[0;32mI (1566) main_task: Returned from app_main()[0m
+[0;32mI (3196) FSM: BOOT -> WARMUP[0m
+[0;33mW (3966) WIFI: Mất kết nối 'Lâm Hoàng', lý do 201[0m
+[0;32mI (5596) FSM: T=31.0C RH=69% CO2=691 NH3=677.691 H2S=593.325 VOC=29912 -> low S=18 [offline][0m
+[0;33mW (8376) WIFI: Mất kết nối 'Lâm Hoàng', lý do 201[0m
+[0;32mI (11596) FSM: T=30.7C RH=70% CO2=694 NH3=704.041 H2S=622.263 VOC=30127 -> low S=14 [offline][0m
+[0;33mW (14786) WIFI: Mất kết nối 'Lâm Hoàng', lý do 201[0m
+[0;32mI (16596) FSM: T=30.5C RH=71% CO2=623 NH3=708.738 H2S=626.586 VOC=30245 -> low S=12 [offline][0m
+[0;32mI (21596) FSM: T=30.3C RH=72% CO2=621 NH3=731.761 H2S=652.939 VOC=30335 -> low S=10 [offline][0m
+[0;33mW (25206) WIFI: Mất kết nối 'Lâm Hoàng', lý do 201[0m
+[0;32mI (26596) FSM: T=30.2C RH=73% CO2=604 NH3=747.490 H2S=664.377 VOC=30415 -> low S=9 [offline][0m
+[0;32mI (31596) FSM: T=30.0C RH=73% CO2=619 NH3=767.208 H2S=676.188 VOC=30487 -> low S=7 [offline][0m
+[0;32mI (36596) FSM: T=29.9C RH=74% CO2=614 NH3=766.157 H2S=687.701 VOC=30544 -> low S=6 [offline][0m
+[0;32mI (41596) FSM: T=29.8C RH=75% CO2=609 NH3=807.820 H2S=720.548 VOC=30599 -> low S=5 [offline][0m
+[0;33mW (43616) WIFI: Mất kết nối 'Lâm Hoàng', lý do 201[0m
+[0;33mW (43616) WIFI: Không kết nối được mạng đã lưu -> bật AP cấu hình[0m
+[0;32mI (43616) wifi:mode : sta (90:da:72:75:f5:2c) + softAP (90:da:72:75:f5:2d)[0m
+[0;32mI (43626) wifi:Total power save buffer number: 16[0m
+[0;32mI (43626) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (43636) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (43636) wifi:Total power save buffer number: 16[0m
+[0;32mI (43646) PORTAL: Web cấu hình chạy tại http://192.168.4.1/[0m
+[0;32mI (43646) DNS: DNS captive đang chạy[0m
+[0;32mI (43646) WIFI: AP cấu hình 'HopCom-F52D' đã bật, truy cập http://192.168.4.1[0m
+[0;32mI (43666) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (43666) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (47596) FSM: T=29.7C RH=75% CO2=604 NH3=828.199 H2S=754.773 VOC=30658 -> low S=4 [offline][0m
+Guru Meditation Error: Core  1 panic'ed (Interrupt wdt timeout on CPU1). 
+
+Core  1 register dump:
+PC      : 0x4037a026  PS      : 0x00060734  A0      : 0x820beb3d  A1      : 0x3fca98f0  
+A2      : 0x00000000  A3      : 0x00000000  A4      : 0x3fca67b0  A5      : 0x3fca6790  
+A6      : 0x40375a44  A7      : 0x00000001  A8      : 0x8201d002  A9      : 0x3fca98b0  
+A10     : 0x00000000  A11     : 0x00000001  A12     : 0x8037d309  A13     : 0x3fcb71a0  
+A14     : 0x00060023  A15     : 0x3fca9ac4  SAR     : 0x00000000  EXCCAUSE: 0x00000006  
+EXCVADDR: 0x00000000  LBEG    : 0x00000000  LEND    : 0x00000000  LCOUNT  : 0x00000000  
+
+
+Backtrace: 0x4037a023:0x3fca98f0 0x420beb3a:0x3fca9910 0x4037e195:0x3fca9930 0x4037cf89:0x3fca9950
+
+
+Core  0 register dump:
+PC      : 0x4037a026  PS      : 0x00060634  A0      : 0x820beb3d  A1      : 0x3fca9190  
+A2      : 0x00000000  A3      : 0xffffffff  A4      : 0x3fca89f0  A5      : 0x00060623  
+A6      : 0x3fca8990  A7      : 0x0000cdcd  A8      : 0x8201d002  A9      : 0x3fca9150  
+A10     : 0x00000000  A11     : 0x00000001  A12     : 0x8037d309  A13     : 0x3fcec6d0  
+A14     : 0x00060023  A15     : 0x3fca9364  SAR     : 0x0000001e  EXCCAUSE: 0x00000006  
+EXCVADDR: 0x00000000  LBEG    : 0x00000000  LEND    : 0x00000000  LCOUNT  : 0x00000000  
+
+
+Backtrace: 0x4037a023:0x3fca9190 0x420beb3a:0x3fca91b0 0x4037e195:0x3fca91d0 0x4037cf89:0x3fca91f0
+
+
+
+
+ELF file SHA256: 78f516d09
+
+Rebooting...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x28 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4200479e
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x158c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f34
+entry 0x403c8924
+[0;32mI (1055) SCD41: SCD41 OK, serial 0x73CB59073BD3[0m
+[0;32mI (1055) SGP40: SGP40 OK, serial 0x000006F0219D[0m
+[0;32mI (1385) MQ: MQ136: R0 từ NVS = 0.16 kOhm[0m
+[0;32mI (1385) MQ: MQ136 sẵn sàng (GPIO 2, kênh 1, R0=0.16 kOhm)[0m
+[0;32mI (1385) MQ: MQ137: R0 từ NVS = 0.16 kOhm[0m
+[0;32mI (1385) MQ: MQ137 sẵn sàng (GPIO 1, kênh 0, R0=0.16 kOhm)[0m
+[0;32mI (1395) SENSOR: Cảm biến: SCD40(CO2+T+RH)=1 SGP40=1 MQ136=1 MQ137=1[0m
+[0;32mI (1395) pp: pp rom version: e7ae62f[0m
+[0;32mI (1405) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (1415) wifi:wifi driver task: 3fcee01c, prio:23, stack:6656, core=0[0m
+[0;32mI (1425) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (1425) wifi:wifi certification version: v7.0[0m
+[0;32mI (1425) wifi:config NVS flash: enabled[0m
+[0;32mI (1425) wifi:config nano formatting: disabled[0m
+[0;32mI (1425) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (1435) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (1435) wifi:Init management short buffer num: 32[0m
+[0;32mI (1435) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (1445) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (1445) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (1455) wifi:Init static rx buffer num: 10[0m
+[0;32mI (1455) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (1465) wifi_init: rx ba win: 6[0m
+[0;32mI (1465) wifi_init: accept mbox: 6[0m
+[0;32mI (1465) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1465) wifi_init: udp mbox: 6[0m
+[0;32mI (1475) wifi_init: tcp mbox: 6[0m
+[0;32mI (1475) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1475) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1485) wifi_init: tcp mss: 1440[0m
+[0;32mI (1485) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1485) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1495) WIFI: Mạng đã lưu: 'Lâm Hoàng'[0m
+[0;33mW (1495) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (1505) phy_init: phy_version 701,f4f1da3a,Mar  3 2025,15:50:10[0m
+[0;32mI (1545) wifi:mode : sta (90:da:72:75:f5:2c)[0m
+[0;32mI (1555) wifi:enable tsf[0m
+[0;32mI (1555) EVAL: Khôi phục phiên e7ce68f6 (com), tuổi 309s[0m
+[0;32mI (1555) CLOUD: MQTT: mqtt://broker.hivemq.com:1883, client hc-90da7275f52c, topic hopcom-khkt2026/...[0m
+[0;32mI (1565) MAIN: Khởi động xong[0m
+[0;32mI (1565) main_task: Returned from app_main()[0m
+[0;32mI (3205) FSM: BOOT -> WARMUP[0m
+[1;31mE (3815) i2c.master: I2C hardware NACK detected[0m
+[1;31mE (3815) i2c.master: I2C transaction unexpected nack detected[0m
+[1;31mE (3815) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[1;31mE (3815) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;33mW (3965) WIFI: Mất kết nối 'Lâm Hoàng', lý do 201[0m
+[0;32mI (5605) FSM: T=31.7C RH=67% CO2=528 NH3=792.132 H2S=721.862 VOC=30601 -> low S=5 [offline][0m
+[0;33mW (8375) WIFI: Mất kết nối 'Lâm Hoàng', lý do 201[0m
+[0;32mI (10605) FSM: T=31.4C RH=68% CO2=554 NH3=791.017 H2S=725.830 VOC=30690 -> low S=4 [offline][0m
+[0;33mW (14795) WIFI: Mất kết nối 'Lâm Hoàng', lý do 201[0m
+[0;32mI (15605) FSM: T=31.2C RH=69% CO2=586 NH3=794.371 H2S=741.124 VOC=30749 -> low S=3 [offline][0m
+[0;32mI (21605) FSM: T=31.0C RH=70% CO2=567 NH3=844.751 H2S=770.376 VOC=30804 -> low S=1 [offline][0m
+[0;33mW (25205) WIFI: Mất kết nối 'Lâm Hoàng', lý do 201[0m
+[0;32mI (26605) FSM: T=30.8C RH=71% CO2=574 NH3=812.710 H2S=750.913 VOC=30840 -> low S=1 [offline][0m
+[0;32mI (31605) FSM: T=30.7C RH=72% CO2=583 NH3=849.049 H2S=774.210 VOC=30859 -> low S=0 [offline][0m
+[0;32mI (36605) FSM: T=30.5C RH=72% CO2=579 NH3=842.993 H2S=768.050 VOC=30872 -> low S=0 [offline][0m
+[0;32mI (41605) FSM: T=30.4C RH=73% CO2=578 NH3=866.130 H2S=806.202 VOC=30909 -> low S=0 [offline][0m
+[0;33mW (43615) WIFI: Mất kết nối 'Lâm Hoàng', lý do 201[0m
+[0;33mW (43615) WIFI: Không kết nối được mạng đã lưu -> bật AP cấu hình[0m
+[0;32mI (43615) wifi:mode : sta (90:da:72:75:f5:2c) + softAP (90:da:72:75:f5:2d)[0m
+[0;32mI (43625) wifi:Total power save buffer number: 16[0m
+[0;32mI (43625) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (43635) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (43645) wifi:Total power save buffer number: 16[0m
+[0;32mI (43645) PORTAL: Web cấu hình chạy tại http://192.168.4.1/[0m
+[0;32mI (43645) DNS: DNS captive đang chạy[0m
+[0;32mI (43645) WIFI: AP cấu hình 'HopCom-F52D' đã bật, truy cập http://192.168.4.1[0m
+[0;32mI (43665) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (43665) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (47605) FSM: T=30.3C RH=73% CO2=581 NH3=872.234 H2S=820.744 VOC=30927 -> low S=0 [offline][0m
+[1;31mE (48815) i2c.master: I2C hardware timeout detected[0m
+[1;31mE (48815) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[1;31mE (48815) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (49815) i2c.master: I2C hardware NACK detected[0m
+[1;31mE (50665) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (50765) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (51665) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (51765) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (52665) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (52765) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (53665) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (53765) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (54665) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (54765) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (54815) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (54815) task_wdt:  - IDLE1 (CPU 1)[0m
+[1;31mE (54815) task_wdt: Tasks currently running:[0m
+[1;31mE (54815) task_wdt: CPU 0: IDLE0[0m
+[1;31mE (54815) task_wdt: CPU 1: app_fsm[0m
+[1;31mE (54815) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40377BDA:0x3FC9D840 0x40377065:0x3FC9D860 0x420BA962:0x3FCB73C0 0x420BAB70:0x3FCB73F0 0x420BAC52:0x3FCB7430 0x420BB826:0x3FCB7460 0x420BB902:0x3FCB7510 0x4200E0AD:0x3FCB7550 0x4200D215:0x3FCB7600 0x4200D28C:0x3FCB7740 0x4037CF89:0x3FCB7780
+
+[1;31mE (55665) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (55765) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (56665) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (56765) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (57665) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (57765) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (58665) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (58765) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m

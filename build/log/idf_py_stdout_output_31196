@@ -1,0 +1,97 @@
+Command: C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Espressif\frameworks\esp-idf-v5.5.1\tools/idf_monitor.py -p COM27 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 D:\PROJECT\KHKT\hop_com_thong_minh\build\hop_com_thong_minh.elf D:\PROJECT\KHKT\hop_com_thong_minh\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Espressif\frameworks\esp-idf-v5.5.1\tools\idf.py' '-p' 'COM27'
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x20 (DOWNLOAD(USB/UART0))
+Saved PC:0x40041a7c
+waiting for download
+[0;32mI (295) esp_image: segment 4: paddr=001260f4 vaddr=40379c54 sizeI (1305) SCD41: SCD41 OK, serial 0x73CB59073BD3[0m
+[0;32mI (1305) SGP40: SGP40 OK, serial 0x000006F0219D[0m
+[0;32mI (1635) MQ: MQ136: R0 từ NVS = 93.98 kOhm[0m
+[0;32mI (1635) MQ: MQ136 sẵn sàng (GPIO 2, kênh 1, R0=93.98 kOhm)[0m
+[0;32mI (1635) MQ: MQ137: R0 từ NVS = 85.01 kOhm[0m
+[0;32mI (1635) MQ: MQ137 sẵn sàng (GPIO 1, kênh 0, R0=85.01 kOhm)[0m
+[0;32mI (1645) SENSOR: Cảm biến: SCD40(CO2+T+RH)=1 SGP40=1 MQ136=1 MQ137=1[0m
+[0;32mI (1645) EVAL: Khôi phục phiên bb5dadf9 (com), tuổi 9s[0m
+[0;32mI (1655) CLOUD: MQTT: mqtt://broker.hivemq.com:1883, client hc-90da7275f52c, topic hopcom-khkt2026/...[0m
+[0;32mI (1665) OTA: Đang chạy hop_com_thong_minh v1 trên phân vùng factory (KHÔNG có phân vùng OTA)[0m
+[0;32mI (1675) MAIN: Khởi động xong[0m
+[0;32mI (1675) main_task: Returned from app_main()[0m
+[0;33mW (3165) WIFI: Mất kết nối 'Lâm Hoàng', lý do 201[0m
+[0;32mI (3165) FSM: BOOT -> WARMUP[0m
+[0;32mI (5705) FSM: T=0.0C RH=0% CO2=0 NH3=3.169 H2S=3.644 VOC=30409 -> invalid S=0 [offline][0m
+[0;32mI (7665) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (7665) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (8665) wifi:state: auth -> init (0x200)[0m
+[0;32mI (8665) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;33mW (8665) WIFI: Mất kết nối 'Lâm Hoàng', lý do 2[0m
+[0;32mI (10705) FSM: T=27.1C RH=51% CO2=721 NH3=3.246 H2S=3.718 VOC=31013 -> low S=9 [offline][0m
+[0;33mW (15085) WIFI: Mất kết nối 'Lâm Hoàng', lý do 201[0m
+[0;32mI (15705) FSM: T=26.9C RH=52% CO2=696 NH3=3.322 H2S=3.890 VOC=31319 -> low S=3 [offline][0m
+[0;32mI (20705) FSM: T=26.7C RH=52% CO2=682 NH3=3.488 H2S=3.865 VOC=31503 -> low S=0 [offline][0m
+[0;33mW (25495) WIFI: Mất kết nối 'Lâm Hoàng', lý do 201[0m
+[0;32mI (25705) FSM: T=26.6C RH=53% CO2=701 NH3=3.307 H2S=3.821 VOC=31628 -> low S=0 [offline][0m
+[0;32mI (30705) FSM: T=26.4C RH=53% CO2=685 NH3=3.407 H2S=3.873 VOC=31703 -> low S=0 [offline][0m
+[0;32mI (35705) FSM: T=26.3C RH=54% CO2=700 NH3=3.467 H2S=3.794 VOC=31744 -> low S=0 [offline][0m
+[0;32mI (40705) FSM: T=26.1C RH=54% CO2=691 NH3=3.368 H2S=3.736 VOC=31778 -> low S=0 [offline][0m
+[0;32mI (43915) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (43915) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (44915) wifi:state: auth -> init (0x200)[0m
+[0;32mI (44915) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;33mW (44915) WIFI: Mất kết nối 'Lâm Hoàng', lý do 2[0m
+[0;33mW (44915) WIFI: Không kết nối được mạng đã lưu -> bật AP cấu hình[0m
+[0;32mI (44925) wifi:mode : sta (90:da:72:75:f5:2c) + softAP (90:da:72:75:f5:2d)[0m
+[0;32mI (44935) wifi:Total power save buffer number: 16[0m
+[0;32mI (44935) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (44945) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (44945) wifi:Total power save buffer number: 16[0m
+[0;32mI (44955) PORTAL: Web cấu hình chạy tại http://192.168.4.1/[0m
+[0;32mI (44955) DNS: DNS captive đang chạy[0m
+[0;32mI (44955) WIFI: AP cấu hình 'HopCom-F52D' đã bật, truy cập http://192.168.4.1[0m
+[0;32mI (44965) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (44975) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (45705) FSM: T=26.0C RH=55% CO2=690 NH3=3.397 H2S=3.927 VOC=31797 -> low S=0 [offline][0m
+[1;31mE (48925) i2c.master: I2C hardware timeout detected[0m
+[1;31mE (48925) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[1;31mE (48925) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (48935) OLED: OLED mất kết nối (ESP_ERR_INVALID_STATE) - kiểm tra dây SDA/SCL, nguồn 3V3/GND[0m
+[1;31mE (49665) i2c.master: I2C transaction unexpected nack detected[0m
+[1;31mE (49665) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[1;31mE (49665) i2c.master: i2c_master_receive(1268): I2C transaction failed[0m
+[0;33mW (49915) I2C: Gỡ bus I2C bị treo: ESP_OK[0m
+[0;32mI (50025) OLED: OLED hoạt động lại sau 1 lần lỗi[0m
+[0;32mI (50705) FSM: T=25.9C RH=55% CO2=689 NH3=3.437 H2S=3.879 VOC=31749 -> low S=0 [offline][0m
+[0;32mI (55705) FSM: T=25.8C RH=56% CO2=687 NH3=3.545 H2S=3.775 VOC=31750 -> low S=0 [offline][0m
+[1;31mE (59955) i2c.master: I2C hardware timeout detected[0m
+[1;31mE (59955) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[1;31mE (59955) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (59965) OLED: OLED mất kết nối (ESP_ERR_INVALID_STATE) - kiểm tra dây SDA/SCL, nguồn 3V3/GND[0m
+[0;32mI (60705) FSM: T=25.7C RH=56% CO2=690 NH3=3.401 H2S=3.887 VOC=31798 -> low S=0 [offline][0m
+[0;32mI (60905) FSM: WARMUP -> SELECT_FOOD[0m
+[0;33mW (60905) I2C: Gỡ bus I2C bị treo: ESP_OK[0m
+[0;32mI (61015) OLED: OLED hoạt động lại sau 1 lần lỗi[0m
+[1;31mE (62665) i2c.master: I2C transaction timeout detected[0m
+[1;31mE (62665) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[1;31mE (62675) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;32mI (65705) FSM: T=25.6C RH=56% CO2=692 NH3=3.179 H2S=3.773 VOC=31673 -> low S=2 [offline][0m
+[0;32mI (69055) FSM: Nút DOWN: nhan[0m
+[0;32mI (70125) FSM: Nút DOWN: nhan[0m
+[0;32mI (71705) FSM: T=25.5C RH=57% CO2=698 NH3=3.455 H2S=3.950 VOC=31790 -> low S=1 [offline][0m
+[0;32mI (72605) FSM: Nút DOWN: nhan[0m
+[0;32mI (73625) FSM: Nút DOWN: nhan[0m
+[0;32mI (76705) FSM: T=25.4C RH=57% CO2=699 NH3=3.374 H2S=4.063 VOC=31847 -> low S=1 [offline][0m
+[1;31mE (79325) i2c.master: I2C hardware NACK detected[0m
+[1;31mE (79325) i2c.master: I2C transaction unexpected nack detected[0m
+[1;31mE (79325) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[1;31mE (79335) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (79335) OLED: OLED mất kết nối (ESP_ERR_INVALID_STATE) - kiểm tra dây SDA/SCL, nguồn 3V3/GND[0m
+[0;33mW (79755) WIFI: Mất kết nối 'Lâm Hoàng', lý do 201[0m
+[0;33mW (80355) I2C: Gỡ bus I2C bị treo: ESP_OK[0m
+[0;32mI (80465) OLED: OLED hoạt động lại sau 1 lần lỗi[0m
+[0;32mI (81705) FSM: T=25.4C RH=57% CO2=699 NH3=3.354 H2S=3.921 VOC=31853 -> low S=1 [offline][0m
+[0;32mI (87705) FSM: T=25.3C RH=58% CO2=701 NH3=3.328 H2S=3.899 VOC=31676 -> low S=1 [offline][0m
+[0;32mI (92705) FSM: T=25.2C RH=58% CO2=701 NH3=3.347 H2S=3.947 VOC=31694 -> low S=1 [offline][0m
+[0;32mI (97705) FSM: T=25.2C RH=58% CO2=702 NH3=3.385 H2S=3.821 VOC=31791 -> low S=1 [offline][0m
+[0;32mI (102705) FSM: T=25.1C RH=58% CO2=702 NH3=3.401 H2S=3.904 VOC=31822 -> low S=1 [offline][0m
+[0;32mI (107705) FSM: T=25.1C RH=59% CO2=704 NH3=3.469 H2S=3.794 VOC=31777 -> low S=1 [offline][0m
+[0;32mI (112705) FSM: T=25.0C RH=59% CO2=703 NH3=3.347 H2S=3.815 VOC=31851 -> low S=1 [offline][0m
+[0;32mI (117705) FSM: T=24.9C RH=59% CO2=702 NH3=3.519 H2S=3.979 VOC=31894 -> low S=0 [offline][0m

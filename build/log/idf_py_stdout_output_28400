@@ -1,0 +1,213 @@
+Command: C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Espressif\frameworks\esp-idf-v5.5.1\tools/idf_monitor.py -p COM27 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 D:\PROJECT\KHKT\hop_com_thong_minh\build\hop_com_thong_minh.elf D:\PROJECT\KHKT\hop_com_thong_minh\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Espressif\frameworks\esp-idf-v5.5.1\tools\idf.py' '-p' 'COM27'
+[0;32mI (120) esp_image: segment 1: paddr=0003da20 vaddr=3fc9ae00 sizeESP-ROM:esp32s3-20210327[0m
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x28 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4037a026
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x158c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f34
+entry 0x403c8924
+[0;32mI (268) esp_image: segment 3: paddr=001011f4 vaddr=3fc9d3f8 sizeI (1045) SCD41: SCD41 OK, serial 0x73CB59073BD3[0m
+[0;32mI (1045) SGP40: SGP40 OK, serial 0x000006F0219D[0m
+[0;32mI (1375) MQ: MQ136: R0 từ NVS = 0.16 kOhm[0m
+[0;32mI (1375) MQ: MQ136 sẵn sàng (GPIO 2, kênh 1, R0=0.16 kOhm)[0m
+[0;32mI (1375) MQ: MQ137: R0 từ NVS = 0.16 kOhm[0m
+[0;32mI (1375) MQ: MQ137 sẵn sàng (GPIO 1, kênh 0, R0=0.16 kOhm)[0m
+[0;32mI (1385) SENSOR: Cảm biến: SCD40(CO2+T+RH)=1 SGP40=1 MQ136=1 MQ137=1[0m
+[0;32mI (1385) pp: pp rom version: e7ae62f[0m
+[0;32mI (1395) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (1405) wifi:wifi driver task: 3fcee01c, prio:23, stack:6656, core=0[0m
+[0;32mI (1415) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (1415) wifi:wifi certification version: v7.0[0m
+[0;32mI (1415) wifi:config NVS flash: enabled[0m
+[0;32mI (1415) wifi:config nano formatting: disabled[0m
+[0;32mI (1415) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (1425) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (1425) wifi:Init management short buffer num: 32[0m
+[0;32mI (1425) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (1435) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (1435) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (1445) wifi:Init static rx buffer num: 10[0m
+[0;32mI (1445) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (1455) wifi_init: rx ba win: 6[0m
+[0;32mI (1455) wifi_init: accept mbox: 6[0m
+[0;32mI (1455) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1455) wifi_init: udp mbox: 6[0m
+[0;32mI (1465) wifi_init: tcp mbox: 6[0m
+[0;32mI (1465) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1465) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1475) wifi_init: tcp mss: 1440[0m
+[0;32mI (1475) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1475) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1485) WIFI: Mạng đã lưu: 'Lâm Hoàng'[0m
+[0;33mW (1485) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (1495) phy_init: phy_version 701,f4f1da3a,Mar  3 2025,15:50:10[0m
+[0;32mI (1535) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (1555) wifi:mode : sta (90:da:72:75:f5:2c)[0m
+[0;32mI (1555) wifi:enable tsf[0m
+[0;32mI (1555) EVAL: Khôi phục phiên e7ce68f6 (com), tuổi 309s[0m
+[0;33mW (1555) mqtt5_client: Connect maximum_packet_size property is over buffer_size(2048), Please first change it[0m
+[0;32mI (1565) CLOUD: MQTT5: mqtt://broker.hivemq.com:1883, thiết bị hc-90da7275f52c, topic hopcom-khkt2026/v1/hc-90da7275f52c/...[0m
+[0;32mI (1575) MAIN: Khởi động xong[0m
+[0;32mI (1575) main_task: Returned from app_main()[0m
+[0;32mI (3215) FSM: BOOT -> WARMUP[0m
+[0;32mI (4055) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (4055) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (5055) wifi:state: auth -> init (0x200)[0m
+[0;32mI (5055) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;33mW (5055) WIFI: Mất kết nối 'Lâm Hoàng', lý do 2[0m
+[0;32mI (5615) FSM: T=35.1C RH=54% CO2=816 NH3=1326.613 H2S=1595.143 VOC=30958 -> low S=0 [local][0m
+[0;33mW (9475) WIFI: Mất kết nối 'Lâm Hoàng', lý do 205[0m
+[0;32mI (10615) FSM: T=34.8C RH=55% CO2=799 NH3=1336.126 H2S=1613.858 VOC=31075 -> low S=0 [local][0m
+[0;32mI (15615) FSM: T=34.6C RH=55% CO2=764 NH3=1387.647 H2S=1704.546 VOC=31116 -> low S=0 [local][0m
+[0;33mW (15885) WIFI: Mất kết nối 'Lâm Hoàng', lý do 201[0m
+[0;32mI (20615) FSM: T=34.4C RH=56% CO2=788 NH3=1368.592 H2S=1655.293 VOC=31129 -> low S=0 [local][0m
+[0;32mI (25615) FSM: T=34.1C RH=57% CO2=748 NH3=1413.858 H2S=1772.038 VOC=31136 -> low S=0 [local][0m
+[0;33mW (26295) WIFI: Mất kết nối 'Lâm Hoàng', lý do 201[0m
+[0;32mI (31615) FSM: T=34.0C RH=57% CO2=742 NH3=1381.877 H2S=1710.301 VOC=31154 -> low S=0 [local][0m
+[0;32mI (37615) FSM: T=33.8C RH=58% CO2=734 NH3=1381.239 H2S=1695.984 VOC=31158 -> low S=0 [local][0m
+[0;32mI (42615) FSM: T=33.6C RH=58% CO2=726 NH3=1431.409 H2S=1775.134 VOC=31160 -> low S=0 [local][0m
+[0;32mI (44715) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (44715) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (44735) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (45735) wifi:state: assoc -> init (0x400)[0m
+[0;32mI (45735) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;33mW (45735) WIFI: Mất kết nối 'Lâm Hoàng', lý do 4[0m
+[0;33mW (45745) WIFI: Không kết nối được mạng đã lưu -> bật AP cấu hình[0m
+[0;32mI (45755) wifi:mode : sta (90:da:72:75:f5:2c) + softAP (90:da:72:75:f5:2d)[0m
+[0;32mI (45755) wifi:Total power save buffer number: 16[0m
+[0;32mI (45765) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (45765) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (45775) wifi:Total power save buffer number: 16[0m
+[0;32mI (45775) PORTAL: Web cấu hình chạy tại http://192.168.4.1/[0m
+[0;32mI (45775) DNS: DNS captive đang chạy[0m
+[0;32mI (45775) WIFI: AP cấu hình 'HopCom-F52D' đã bật, truy cập http://192.168.4.1[0m
+[0;32mI (45795) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (45805) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (47615) FSM: T=33.4C RH=59% CO2=723 NH3=1406.556 H2S=1910.579 VOC=31161 -> low S=0 [local][0m
+[0;32mI (52615) FSM: T=33.2C RH=60% CO2=718 NH3=1452.890 H2S=1804.548 VOC=31164 -> low S=0 [local][0m
+[0;32mI (55965) wifi:new:<6,0>, old:<6,1>, ap:<6,0>, sta:<6,0>, prof:6, snd_ch_cfg:0x0[0m
+[0;32mI (55965) wifi:station: f2:cb:cb:39:48:b8 join, AID=1, bgn, 20[0m
+[0;32mI (55965) WIFI: AP: 1 thiết bị đang kết nối[0m
+[0;32mI (56005) WIFI: AP: 1 thiết bị đang kết nối[0m
+[0;32mI (56015) wifi:new:<6,0>, old:<6,0>, ap:<6,0>, sta:<6,0>, prof:6, snd_ch_cfg:0x0[0m
+[0;32mI (56025) wifi:station: f2:cb:cb:39:48:b8 join, AID=1, bgn, 20[0m
+[0;32mI (56025) WIFI: AP: 1 thiết bị đang kết nối[0m
+[0;32mI (56225) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+[0;32mI (57425) wifi:<ba-add>idx:2 (ifx:1, f2:cb:cb:39:48:b8), tid:0, ssn:0, winSize:64[0m
+[0;32mI (57615) FSM: T=33.1C RH=60% CO2=718 NH3=1418.542 H2S=1717.062 VOC=31162 -> low S=0 [local][0m
+[0;32mI (58015) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+[0;32mI (60045) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+[0;33mW (60425) httpd_uri: httpd_uri: URI '/hotspot-detect.html' not found[0m
+[0;33mW (63205) httpd_uri: httpd_uri: URI '/hotspot-detect.html' not found[0m
+[0;32mI (63615) FSM: T=33.0C RH=61% CO2=714 NH3=1460.661 H2S=1825.051 VOC=31158 -> low S=0 [local][0m
+[0;33mW (64195) httpd_uri: httpd_uri: URI '/hotspot-detect.html' not found[0m
+[0;32mI (68615) FSM: T=32.8C RH=61% CO2=711 NH3=1408.540 H2S=1693.149 VOC=31157 -> low S=0 [local][0m
+[0;32mI (74615) FSM: T=32.8C RH=61% CO2=707 NH3=1369.847 H2S=1787.626 VOC=31151 -> low S=0 [local][0m
+[0;32mI (79615) FSM: T=32.7C RH=62% CO2=705 NH3=1450.083 H2S=1756.710 VOC=31147 -> low S=0 [local][0m
+[0;32mI (80585) wifi:new:<6,0>, old:<6,0>, ap:<6,0>, sta:<6,0>, prof:6, snd_ch_cfg:0x0[0m
+[0;32mI (80585) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (80595) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (80605) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (80615) wifi:<ba-add>idx:3 (ifx:1, f2:cb:cb:39:48:b8), tid:1, ssn:2, winSize:64[0m
+[0;32mI (80665) wifi:connected with Lâm Hoàng, aid = 1, channel 6, BW20, bssid = 3e:d7:c8:65:69:6e[0m
+[0;32mI (80665) wifi:security: WPA2-PSK, phy: bgn, rssi: -27[0m
+[0;32mI (80665) wifi:pm start, type: 1[0m
+
+[0;32mI (80665) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (80675) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (80705) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (81875) esp_netif_handlers: sta ip: 172.20.10.2, mask: 255.255.255.240, gw: 172.20.10.1[0m
+[0;32mI (81875) WIFI: Đã kết nối 'Lâm Hoàng', IP 172.20.10.2, RSSI -27[0m
+[0;32mI (81895) wifi:<ba-add>idx:0 (ifx:0, 3e:d7:c8:65:69:6e), tid:0, ssn:2, winSize:64[0m
+[0;32mI (84065) wifi:station: f2:cb:cb:39:48:b8 leave, AID = 1, reason = 8, bss_flags is 33721443, bss:0x3fcbb4d8[0m
+[0;32mI (84065) wifi:new:<6,0>, old:<6,0>, ap:<6,0>, sta:<6,0>, prof:6, snd_ch_cfg:0x0[0m
+[0;32mI (84065) wifi:<ba-del>idx:2, tid:0[0m
+[0;32mI (84075) wifi:<ba-del>idx:3, tid:1[0m
+[0;32mI (84075) WIFI: AP: 0 thiết bị đang kết nối[0m
+[0;32mI (85615) FSM: T=32.6C RH=62% CO2=700 NH3=1455.706 H2S=1754.686 VOC=31147 -> low S=0 [local][0m
+[0;32mI (91365) CLOUD: Đã kết nối broker mqtt://broker.hivemq.com:1883[0m
+[0;32mI (91615) FSM: T=32.5C RH=62% CO2=695 NH3=1406.556 H2S=1733.699 VOC=31147 -> low S=0 [local][0m
+[0;32mI (92915) CLOUD: eval seq=91 level=low score=0[0m
+[0;32mI (95905) CLOUD: eval seq=94 level=low score=0[0m
+[0;32mI (97615) FSM: T=32.4C RH=62% CO2=696 NH3=1372.363 H2S=1622.506 VOC=30969 -> low S=0 [server][0m
+[0;32mI (98845) CLOUD: eval seq=97 level=low score=0[0m
+[0;32mI (102925) CLOUD: eval seq=101 level=low score=0[0m
+[0;32mI (103615) FSM: T=32.4C RH=63% CO2=696 NH3=1392.814 H2S=1709.339 VOC=31081 -> low S=0 [server][0m
+[0;32mI (105295) CLOUD: eval seq=104 level=low score=0[0m
+[0;32mI (108615) FSM: T=32.3C RH=63% CO2=698 NH3=1390.226 H2S=1700.731 VOC=31118 -> low S=0 [server][0m
+[0;32mI (109215) CLOUD: eval seq=108 level=low score=0[0m
+[0;32mI (112445) CLOUD: eval seq=111 level=low score=0[0m
+[0;32mI (113615) FSM: T=32.2C RH=63% CO2=696 NH3=1396.714 H2S=1663.462 VOC=31128 -> low S=0 [server][0m
+[0;32mI (115735) CLOUD: eval seq=114 level=low score=0[0m
+[0;32mI (118615) FSM: T=32.2C RH=63% CO2=696 NH3=1378.692 H2S=1675.400 VOC=31136 -> low S=0 [server][0m
+[0;32mI (119015) CLOUD: eval seq=117 level=low score=0[0m
+[0;32mI (120615) FSM: WARMUP -> MONITOR[0m
+[0;32mI (122295) CLOUD: eval seq=121 level=low score=0[0m
+[0;32mI (123615) FSM: T=32.1C RH=64% CO2=694 NH3=1358.015 H2S=1694.093 VOC=31144 -> low S=0 [server][0m
+[0;32mI (126695) CLOUD: eval seq=125 level=low score=0[0m
+[0;32mI (129615) FSM: T=31.9C RH=65% CO2=692 NH3=1391.519 H2S=1713.192 VOC=31145 -> low S=0 [server][0m
+[0;32mI (130335) CLOUD: eval seq=129 level=low score=0[0m
+[0;32mI (133355) CLOUD: eval seq=132 level=low score=0[0m
+[0;32mI (134615) FSM: T=31.9C RH=65% CO2=688 NH3=1424.609 H2S=1798.166 VOC=31151 -> low S=0 [server][0m
+[0;32mI (136835) CLOUD: eval seq=135 level=low score=0[0m
+[0;32mI (139615) FSM: T=31.8C RH=65% CO2=683 NH3=1374.888 H2S=1758.739 VOC=31153 -> low S=0 [server][0m
+[0;32mI (141645) CLOUD: eval seq=139 level=low score=0[0m
+[0;32mI (144695) CLOUD: eval seq=143 level=low score=0[0m
+[0;32mI (145615) FSM: T=31.8C RH=65% CO2=680 NH3=1389.580 H2S=1758.739 VOC=31156 -> low S=0 [server][0m
+[0;32mI (148215) CLOUD: eval seq=146 level=low score=0[0m
+[0;32mI (150615) FSM: T=31.8C RH=65% CO2=676 NH3=1402.603 H2S=1768.952 VOC=31150 -> low S=0 [server][0m
+[0;32mI (150655) CLOUD: eval seq=149 level=low score=0[0m
+[0;32mI (153675) CLOUD: eval seq=152 level=low score=0[0m
+[0;32mI (154425) FSM: Nút DOWN: nhan[0m
+[0;32mI (156615) FSM: T=31.8C RH=65% CO2=649 NH3=1408.540 H2S=1771.008 VOC=31152 -> low S=0 [server][0m
+[0;32mI (157705) CLOUD: eval seq=156 level=low score=0[0m
+[0;32mI (160995) CLOUD: eval seq=159 level=low score=0[0m
+[0;32mI (161615) FSM: T=31.8C RH=65% CO2=607 NH3=1064.581 H2S=1413.191 VOC=30636 -> low S=0 [server][0m
+[0;32mI (163255) CLOUD: eval seq=162 level=low score=6[0m
+[0;32mI (166215) CLOUD: eval seq=165 level=low score=4[0m
+[0;32mI (166615) FSM: T=31.7C RH=65% CO2=622 NH3=1137.836 H2S=1494.044 VOC=30724 -> low S=4 [server][0m
+[0;32mI (171235) CLOUD: eval seq=169 level=low score=0[0m
+[0;32mI (172615) FSM: T=31.7C RH=66% CO2=754 NH3=1211.282 H2S=1513.568 VOC=30975 -> low S=0 [server][0m
+[0;32mI (174925) CLOUD: eval seq=173 level=low score=0[0m
+[0;32mI (177485) CLOUD: eval seq=176 level=low score=0[0m
+[0;32mI (177615) FSM: T=31.7C RH=66% CO2=782 NH3=1243.869 H2S=1571.103 VOC=31069 -> low S=0 [server][0m
+[0;32mI (180455) CLOUD: eval seq=179 level=low score=0[0m
+[0;32mI (182615) FSM: T=31.7C RH=66% CO2=785 NH3=1297.701 H2S=1606.151 VOC=31114 -> low S=0 [server][0m
+[0;32mI (183835) CLOUD: eval seq=182 level=low score=0[0m
+[0;32mI (187615) FSM: T=31.7C RH=65% CO2=791 NH3=1294.876 H2S=1671.709 VOC=31141 -> low S=0 [server][0m
+[0;32mI (188135) CLOUD: eval seq=186 level=low score=0[0m
+[0;32mI (191935) CLOUD: eval seq=190 level=low score=0[0m
+[0;32mI (193615) FSM: T=31.8C RH=65% CO2=790 NH3=1329.571 H2S=1660.730 VOC=31139 -> low S=0 [server][0m
+[0;32mI (194685) CLOUD: eval seq=193 level=low score=0[0m
+[0;32mI (198065) CLOUD: eval seq=196 level=low score=0[0m
+[0;32mI (198615) FSM: T=31.8C RH=65% CO2=791 NH3=1352.479 H2S=1683.762 VOC=31144 -> low S=0 [server][0m
+[0;32mI (200905) CLOUD: eval seq=199 level=low score=0[0m
+[0;32mI (203615) FSM: T=31.8C RH=65% CO2=788 NH3=1369.847 H2S=1670.789 VOC=31148 -> low S=0 [server][0m
+[0;32mI (204305) CLOUD: eval seq=203 level=low score=0[0m
+[0;32mI (208615) FSM: T=31.8C RH=65% CO2=786 NH3=1366.089 H2S=1672.630 VOC=31152 -> low S=0 [server][0m
+[0;32mI (208925) CLOUD: eval seq=207 level=low score=0[0m
+[0;32mI (211585) CLOUD: eval seq=210 level=low score=0[0m
+[0;32mI (214615) FSM: T=31.8C RH=65% CO2=782 NH3=1368.592 H2S=1737.659 VOC=31152 -> low S=0 [server][0m
+[0;32mI (215065) CLOUD: eval seq=213 level=low score=0[0m
+[0;32mI (217525) CLOUD: eval seq=216 level=low score=0[0m
+[0;32mI (219615) FSM: T=31.8C RH=65% CO2=778 NH3=1376.787 H2S=1719.003 VOC=31158 -> low S=0 [server][0m
+[0;32mI (221515) CLOUD: eval seq=220 level=low score=0[0m
+[0;32mI (224615) FSM: T=31.8C RH=65% CO2=740 NH3=1414.525 H2S=1747.636 VOC=31160 -> low S=0 [server][0m
+[0;32mI (224905) CLOUD: eval seq=223 level=low score=0[0m
+[0;32mI (227355) CLOUD: eval seq=226 level=low score=0[0m
+[0;32mI (229615) FSM: T=31.8C RH=65% CO2=736 NH3=1381.239 H2S=1697.880 VOC=31158 -> low S=0 [server][0m
+[0;32mI (230325) CLOUD: eval seq=229 level=low score=0[0m
+[0;32mI (234265) CLOUD: eval seq=233 level=low score=0[0m
+[0;32mI (234615) FSM: T=31.7C RH=65% CO2=722 NH3=1396.062 H2S=1740.641 VOC=31162 -> low S=0 [server][0m
+[0;32mI (238415) CLOUD: eval seq=237 level=low score=0[0m
+[0;32mI (240615) FSM: T=31.8C RH=65% CO2=692 NH3=1392.814 H2S=1767.925 VOC=31162 -> low S=0 [server][0m
+[0;32mI (242295) CLOUD: eval seq=241 level=low score=0[0m
+[0;32mI (245615) FSM: T=31.8C RH=65% CO2=689 NH3=1366.089 H2S=1717.062 VOC=31157 -> low S=0 [server][0m
+[0;32mI (246295) CLOUD: eval seq=245 level=low score=0[0m
+[0;32mI (249665) CLOUD: eval seq=248 level=low score=0[0m
+[0;32mI (250615) FSM: T=31.8C RH=65% CO2=675 NH3=1324.843 H2S=1631.243 VOC=31152 -> low S=0 [server][0m
+[0;32mI (253055) CLOUD: eval seq=251 level=low score=0[0m
+[0;32mI (255615) FSM: T=31.9C RH=65% CO2=660 NH3=1390.226 H2S=1753.675 VOC=31150 -> low S=0 [server][0m

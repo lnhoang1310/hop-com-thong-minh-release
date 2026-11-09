@@ -1,0 +1,501 @@
+Command: C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Espressif\frameworks\esp-idf-v5.5.1\tools/idf_monitor.py -p COM27 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 D:\PROJECT\KHKT\hop_com_thong_minh\build\hop_com_thong_minh.elf D:\PROJECT\KHKT\hop_com_thong_minh\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Espressif\frameworks\esp-idf-v5.5.1\tools\idf.py' '-p' 'COM27'
+[0;32mI (120) esp_image: segment 1: paddr=0003da10 vaddr=3fc9ae00 sizeESP-ROM:esp32s3-20210327[0m
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x28 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4037a026
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x158c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f34
+entry 0x403c8924
+[0;32mI (268) esp_image: segment 3: paddr=001011f4 vaddr=3fc9d408 sizeI (1045) SCD41: SCD41 OK, serial 0x73CB59073BD3[0m
+[0;32mI (1045) SGP40: SGP40 OK, serial 0x000006F0219D[0m
+[0;32mI (1375) MQ: MQ136: R0 từ NVS = 0.16 kOhm[0m
+[0;32mI (1375) MQ: MQ136 sẵn sàng (GPIO 2, kênh 1, R0=0.16 kOhm)[0m
+[0;32mI (1375) MQ: MQ137: R0 từ NVS = 0.16 kOhm[0m
+[0;32mI (1375) MQ: MQ137 sẵn sàng (GPIO 1, kênh 0, R0=0.16 kOhm)[0m
+[0;32mI (1385) SENSOR: Cảm biến: SCD40(CO2+T+RH)=1 SGP40=1 MQ136=1 MQ137=1[0m
+[0;32mI (1385) pp: pp rom version: e7ae62f[0m
+[0;32mI (1395) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (1405) wifi:wifi driver task: 3fcedf78, prio:23, stack:6656, core=0[0m
+[0;32mI (1415) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (1415) wifi:wifi certification version: v7.0[0m
+[0;32mI (1415) wifi:config NVS flash: enabled[0m
+[0;32mI (1415) wifi:config nano formatting: disabled[0m
+[0;32mI (1415) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (1425) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (1425) wifi:Init management short buffer num: 32[0m
+[0;32mI (1425) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (1435) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (1435) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (1445) wifi:Init static rx buffer num: 10[0m
+[0;32mI (1445) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (1455) wifi_init: rx ba win: 6[0m
+[0;32mI (1455) wifi_init: accept mbox: 6[0m
+[0;32mI (1455) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1455) wifi_init: udp mbox: 6[0m
+[0;32mI (1465) wifi_init: tcp mbox: 6[0m
+[0;32mI (1465) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1465) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1475) wifi_init: tcp mss: 1440[0m
+[0;32mI (1475) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1475) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1485) WIFI: Chưa có mạng WiFi -> bật AP cấu hình[0m
+[0;32mI (1485) phy_init: phy_version 701,f4f1da3a,Mar  3 2025,15:50:10[0m
+[0;32mI (1535) wifi:mode : sta (90:da:72:75:f5:2c)[0m
+[0;32mI (1535) wifi:enable tsf[0m
+[0;32mI (1535) wifi:mode : sta (90:da:72:75:f5:2c) + softAP (90:da:72:75:f5:2d)[0m
+[0;32mI (1535) wifi:Total power save buffer number: 16[0m
+[0;32mI (1535) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (1545) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (1545) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (1545) wifi:Total power save buffer number: 16[0m
+[0;32mI (1565) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (1575) DNS: DNS captive đang chạy[0m
+[0;32mI (1575) PORTAL: Web cấu hình chạy tại http://192.168.4.1/[0m
+[0;32mI (1575) WIFI: AP cấu hình 'HopCom-F52D' đã bật, truy cập http://192.168.4.1[0m
+[0;32mI (1585) EVAL: Khôi phục phiên ee646b74 (com), tuổi 0s[0m
+[0;33mW (1595) mqtt5_client: Connect maximum_packet_size property is over buffer_size(2048), Please first change it[0m
+[0;32mI (1595) CLOUD: MQTT5: mqtt://192.168.1.10:1883, thiết bị hc-90da7275f52c, topic hopcom/v1/hc-90da7275f52c/...[0m
+[0;32mI (1605) MAIN: Khởi động xong[0m
+[0;32mI (1615) main_task: Returned from app_main()[0m
+[0;32mI (3245) FSM: BOOT -> WARMUP[0m
+[0;32mI (5645) FSM: T=34.4C RH=55% CO2=1236 NH3=1539.852 H2S=1794.992 VOC=30869 -> invalid S=0 [local][0m
+[0;32mI (9825) FSM: Nút OK: nhan[0m
+[0;33mW (9825) FSM: Bỏ qua màn hình làm nóng (kênh MQ vẫn chờ đủ thời gian)[0m
+[0;32mI (9825) FSM: WARMUP -> MONITOR[0m
+[0;32mI (10645) FSM: T=34.0C RH=56% CO2=1202 NH3=1526.601 H2S=1794.992 VOC=31006 -> invalid S=0 [local][0m
+[0;32mI (15645) FSM: T=33.8C RH=57% CO2=1229 NH3=1489.607 H2S=1812.050 VOC=31043 -> invalid S=0 [local][0m
+[0;32mI (20645) FSM: T=33.6C RH=57% CO2=1210 NH3=1468.513 H2S=1696.931 VOC=31060 -> invalid S=0 [local][0m
+[0;32mI (25645) FSM: T=33.4C RH=58% CO2=1234 NH3=1459.242 H2S=1760.772 VOC=31055 -> invalid S=0 [local][0m
+[0;32mI (30365) FSM: Nút DOWN: nhan[0m
+[0;32mI (30645) FSM: T=33.3C RH=59% CO2=1220 NH3=1511.290 H2S=1826.142 VOC=31060 -> invalid S=0 [local][0m
+[0;32mI (36645) FSM: T=33.1C RH=59% CO2=1196 NH3=1482.998 H2S=1780.318 VOC=31077 -> invalid S=0 [local][0m
+[0;32mI (41645) FSM: T=32.9C RH=60% CO2=1176 NH3=1480.808 H2S=1817.445 VOC=31081 -> invalid S=0 [local][0m
+[0;32mI (46645) FSM: T=32.8C RH=60% CO2=1164 NH3=1492.562 H2S=1804.548 VOC=31079 -> invalid S=0 [local][0m
+[0;32mI (51645) FSM: T=32.7C RH=61% CO2=1155 NH3=1499.253 H2S=1813.126 VOC=31077 -> invalid S=0 [local][0m
+[0;32mI (56645) FSM: T=32.6C RH=61% CO2=1115 NH3=1527.375 H2S=1803.482 VOC=31081 -> invalid S=0 [local][0m
+[0;32mI (61645) FSM: T=32.5C RH=61% CO2=1029 NH3=1508.264 H2S=1775.134 VOC=31079 -> invalid S=0 [local][0m
+[0;32mI (66645) FSM: T=32.3C RH=62% CO2=1021 NH3=1474.998 H2S=1756.710 VOC=31072 -> invalid S=0 [local][0m
+[0;32mI (71645) FSM: T=32.2C RH=63% CO2=1019 NH3=1500.747 H2S=1827.235 VOC=31075 -> invalid S=0 [local][0m
+[0;32mI (76645) FSM: T=32.2C RH=63% CO2=1007 NH3=1503.745 H2S=1792.881 VOC=31080 -> invalid S=0 [local][0m
+[0;32mI (82645) FSM: T=32.1C RH=63% CO2=1008 NH3=1474.998 H2S=1776.169 VOC=31080 -> invalid S=0 [local][0m
+[0;32mI (87645) FSM: T=32.1C RH=63% CO2=1003 NH3=1470.669 H2S=1803.482 VOC=31076 -> invalid S=0 [local][0m
+[0;32mI (92645) FSM: T=32.1C RH=63% CO2=1003 NH3=1393.463 H2S=1675.400 VOC=31040 -> invalid S=0 [local][0m
+[0;32mI (97645) FSM: T=32.1C RH=64% CO2=998 NH3=1116.619 H2S=1494.044 VOC=30992 -> invalid S=0 [local][0m
+[0;32mI (102645) FSM: T=32.2C RH=65% CO2=997 NH3=1395.412 H2S=1697.880 VOC=30949 -> invalid S=0 [local][0m
+[0;32mI (107645) FSM: T=32.2C RH=65% CO2=990 NH3=1446.590 H2S=1786.578 VOC=30949 -> invalid S=0 [local][0m
+[0;32mI (112645) FSM: T=32.1C RH=65% CO2=991 NH3=1493.302 H2S=1839.340 VOC=30984 -> invalid S=0 [local][0m
+[0;32mI (117645) FSM: T=32.1C RH=65% CO2=992 NH3=1485.195 H2S=1830.521 VOC=31035 -> invalid S=0 [local][0m
+[0;32mI (122645) FSM: T=32.1C RH=65% CO2=993 NH3=1488.870 H2S=1792.881 VOC=31040 -> invalid S=0 [local][0m
+[0;32mI (127645) FSM: T=32.0C RH=65% CO2=991 NH3=1432.776 H2S=1810.974 VOC=31038 -> invalid S=0 [local][0m
+[0;32mI (129645) EVAL: Nền: NH3 1434.223 H2S 1802.610 VOC 31037 CO2 990[0m
+[0;32mI (129685) FSM: Mức: invalid -> low (local)[0m
+[0;32mI (133645) FSM: T=32.1C RH=65% CO2=988 NH3=1432.776 H2S=1649.889 VOC=31001 -> low S=0 [local][0m
+[0;32mI (138645) FSM: T=32.1C RH=65% CO2=988 NH3=1390.872 H2S=1595.984 VOC=30992 -> low S=0 [local][0m
+[0;32mI (143645) FSM: T=32.1C RH=66% CO2=987 NH3=1441.726 H2S=1631.243 VOC=30988 -> low S=0 [local][0m
+[0;32mI (148645) FSM: T=32.1C RH=66% CO2=985 NH3=1416.531 H2S=1515.853 VOC=30974 -> low S=1 [local][0m
+[0;32mI (153645) FSM: T=32.2C RH=66% CO2=980 NH3=1389.580 H2S=1647.200 VOC=30997 -> low S=0 [local][0m
+[0;32mI (158645) FSM: T=32.2C RH=65% CO2=878 NH3=1469.231 H2S=1685.631 VOC=30985 -> low S=0 [local][0m
+[0;32mI (164645) FSM: T=32.2C RH=66% CO2=877 NH3=1428.682 H2S=1755.697 VOC=31014 -> low S=0 [local][0m
+[0;32mI (169645) FSM: T=32.3C RH=65% CO2=878 NH3=1435.519 H2S=1710.301 VOC=31022 -> low S=0 [local][0m
+[0;32mI (174645) FSM: T=32.3C RH=65% CO2=877 NH3=1436.206 H2S=1746.633 VOC=31003 -> low S=0 [local][0m
+[0;32mI (179125) FSM: Nút DOWN: nhan[0m
+[0;32mI (179645) FSM: T=32.4C RH=65% CO2=879 NH3=1392.166 H2S=1719.976 VOC=30954 -> low S=0 [local][0m
+[0;32mI (184645) FSM: T=32.4C RH=65% CO2=881 NH3=1381.877 H2S=1719.003 VOC=30993 -> low S=0 [local][0m
+[0;32mI (190645) FSM: T=32.5C RH=64% CO2=885 NH3=1335.527 H2S=1760.772 VOC=31011 -> low S=0 [local][0m
+[0;32mI (195645) FSM: T=32.6C RH=64% CO2=885 NH3=1372.363 H2S=1786.578 VOC=31027 -> low S=0 [local][0m
+[0;32mI (200355) FSM: Nút DOWN: nhan[0m
+[0;32mI (201645) FSM: T=32.6C RH=64% CO2=886 NH3=1414.525 H2S=1772.038 VOC=31028 -> low S=0 [local][0m
+[0;32mI (204275) FSM: Nút DOWN: nhan[0m
+[0;32mI (206645) FSM: T=32.6C RH=64% CO2=885 NH3=1442.419 H2S=1786.578 VOC=31021 -> low S=0 [local][0m
+[0;32mI (211645) FSM: T=32.7C RH=64% CO2=884 NH3=1463.507 H2S=1765.876 VOC=31018 -> low S=0 [local][0m
+[0;32mI (214285) FSM: Nút DOWN: nhan[0m
+[0;32mI (214825) FSM: Nút DOWN: nhan[0m
+[0;32mI (216645) FSM: T=32.8C RH=63% CO2=879 NH3=1443.113 H2S=1788.675 VOC=31016 -> low S=0 [local][0m
+[0;32mI (219635) FSM: Nút DOWN: nhan[0m
+[0;32mI (220895) FSM: Nút DOWN: nhan[0m
+[0;32mI (222645) FSM: T=32.8C RH=63% CO2=877 NH3=1443.807 H2S=1853.848 VOC=31014 -> low S=0 [local][0m
+[0;32mI (228645) FSM: T=32.9C RH=63% CO2=876 NH3=1408.540 H2S=1759.755 VOC=31016 -> low S=0 [local][0m
+[0;32mI (233645) FSM: T=32.9C RH=63% CO2=877 NH3=1376.787 H2S=1747.636 VOC=31018 -> low S=0 [local][0m
+[0;32mI (238645) FSM: T=32.8C RH=63% CO2=876 NH3=1403.260 H2S=1756.710 VOC=31016 -> low S=0 [local][0m
+[0;32mI (244645) FSM: T=32.8C RH=63% CO2=875 NH3=1421.232 H2S=1722.899 VOC=31018 -> low S=0 [local][0m
+[0;32mI (249645) FSM: T=32.7C RH=63% CO2=877 NH3=1412.524 H2S=1761.790 VOC=31015 -> low S=0 [local][0m
+[0;32mI (254645) FSM: T=32.8C RH=63% CO2=875 NH3=1428.001 H2S=1769.979 VOC=31013 -> low S=0 [local][0m
+[0;32mI (259645) FSM: T=32.7C RH=63% CO2=872 NH3=1421.907 H2S=1759.755 VOC=31020 -> low S=0 [local][0m
+[0;32mI (264645) FSM: T=32.7C RH=63% CO2=870 NH3=1411.194 H2S=1761.790 VOC=31014 -> low S=0 [local][0m
+[0;32mI (269645) FSM: T=32.7C RH=63% CO2=869 NH3=1392.814 H2S=1730.740 VOC=31019 -> low S=0 [local][0m
+[0;32mI (274645) FSM: T=32.7C RH=63% CO2=867 NH3=1398.018 H2S=1720.949 VOC=31014 -> low S=0 [local][0m
+[0;32mI (279645) FSM: T=32.7C RH=63% CO2=868 NH3=1405.236 H2S=1775.134 VOC=31008 -> low S=0 [local][0m
+[0;32mI (284645) FSM: T=32.7C RH=63% CO2=863 NH3=1409.202 H2S=1791.828 VOC=31005 -> low S=0 [local][0m
+[0;32mI (289645) FSM: T=32.6C RH=63% CO2=860 NH3=1407.878 H2S=1702.636 VOC=31005 -> low S=0 [local][0m
+[0;32mI (294645) FSM: T=32.6C RH=63% CO2=860 NH3=1367.966 H2S=1644.520 VOC=30876 -> low S=0 [local][0m
+[0;32mI (299645) FSM: T=32.6C RH=63% CO2=868 NH3=1375.520 H2S=1676.325 VOC=30834 -> low S=0 [local][0m
+[0;32mI (304645) FSM: T=32.6C RH=64% CO2=886 NH3=1408.540 H2S=1734.688 VOC=30918 -> low S=0 [local][0m
+[0;32mI (309645) FSM: T=32.6C RH=63% CO2=934 NH3=1401.290 H2S=1747.636 VOC=30963 -> low S=0 [local][0m
+[0;32mI (314645) FSM: T=32.6C RH=64% CO2=941 NH3=1392.166 H2S=1633.882 VOC=30982 -> low S=0 [local][0m
+[0;32mI (319645) FSM: T=32.6C RH=64% CO2=1007 NH3=1419.886 H2S=1701.683 VOC=30996 -> low S=0 [local][0m
+[0;32mI (324645) FSM: T=32.5C RH=64% CO2=1003 NH3=1419.886 H2S=1726.811 VOC=31005 -> low S=0 [local][0m
+[0;32mI (329645) FSM: T=32.5C RH=64% CO2=1000 NH3=1424.609 H2S=1721.923 VOC=31014 -> low S=0 [local][0m
+[0;32mI (334645) FSM: T=32.5C RH=64% CO2=1000 NH3=1398.672 H2S=1660.730 VOC=31016 -> low S=0 [local][0m
+[0;32mI (339645) FSM: T=32.5C RH=64% CO2=999 NH3=1424.609 H2S=1745.632 VOC=31022 -> low S=0 [local][0m
+[0;32mI (345645) FSM: T=32.5C RH=63% CO2=995 NH3=1410.529 H2S=1750.651 VOC=31031 -> low S=0 [local][0m
+[0;32mI (350645) FSM: T=32.5C RH=63% CO2=993 NH3=1463.507 H2S=1759.755 VOC=31023 -> low S=0 [local][0m
+[0;32mI (355645) FSM: T=32.5C RH=63% CO2=990 NH3=1442.419 H2S=1779.280 VOC=31036 -> low S=0 [local][0m
+[0;32mI (360645) FSM: T=32.5C RH=63% CO2=987 NH3=1443.113 H2S=1743.632 VOC=31035 -> low S=0 [local][0m
+[0;32mI (365645) FSM: T=32.4C RH=63% CO2=972 NH3=1445.197 H2S=1797.107 VOC=31035 -> low S=0 [local][0m
+[0;32mI (370645) FSM: T=32.5C RH=63% CO2=945 NH3=1452.890 H2S=1805.616 VOC=31036 -> low S=0 [local][0m
+[0;32mI (375645) FSM: T=32.4C RH=63% CO2=942 NH3=1449.383 H2S=1796.048 VOC=31036 -> low S=0 [local][0m
+[0;32mI (380645) FSM: T=32.4C RH=63% CO2=941 NH3=1445.197 H2S=1806.685 VOC=31039 -> low S=0 [local][0m
+[0;32mI (385645) FSM: T=32.4C RH=63% CO2=933 NH3=1441.034 H2S=1752.666 VOC=31030 -> low S=0 [local][0m
+[0;32mI (390645) FSM: T=32.4C RH=63% CO2=905 NH3=1430.044 H2S=1798.166 VOC=31043 -> low S=0 [local][0m
+[0;32mI (395645) FSM: T=32.3C RH=63% CO2=903 NH3=1473.552 H2S=1742.634 VOC=31039 -> low S=0 [local][0m
+[0;32mI (400645) FSM: T=32.3C RH=63% CO2=903 NH3=1438.961 H2S=1769.979 VOC=31034 -> low S=0 [local][0m
+[0;32mI (403325) wifi:new:<6,0>, old:<6,1>, ap:<6,0>, sta:<0,0>, prof:6, snd_ch_cfg:0x0[0m
+[0;32mI (403325) wifi:station: 02:cc:52:3e:d0:2c join, AID=1, bgn, 20[0m
+[0;32mI (403335) WIFI: AP: 1 thiết bị đang kết nối[0m
+[0;32mI (403375) wifi:<ba-add>idx:2 (ifx:1, 02:cc:52:3e:d0:2c), tid:0, ssn:0, winSize:64[0m
+[0;32mI (404875) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+[0;32mI (405645) FSM: T=32.3C RH=63% CO2=901 NH3=1455.001 H2S=1808.828 VOC=31032 -> low S=0 [local][0m
+[0;33mW (407865) httpd_uri: httpd_uri: URI '/hotspot-detect.html' not found[0m
+[0;32mI (410645) FSM: T=32.3C RH=63% CO2=901 NH3=1443.113 H2S=1769.979 VOC=31037 -> low S=0 [local][0m
+[0;33mW (411305) httpd_uri: httpd_uri: URI '/hotspot-detect.html' not found[0m
+[0;33mW (411605) httpd_uri: httpd_uri: URI '/hotspot-detect.html' not found[0m
+[0;33mW (414715) httpd_uri: httpd_uri: URI '/hotspot-detect.html' not found[0m
+[0;32mI (415645) FSM: T=32.3C RH=63% CO2=896 NH3=1459.951 H2S=1810.974 VOC=31036 -> low S=0 [local][0m
+[0;32mI (420645) FSM: T=32.2C RH=63% CO2=893 NH3=1434.832 H2S=1796.048 VOC=31032 -> low S=0 [local][0m
+[0;32mI (425645) FSM: T=32.2C RH=63% CO2=893 NH3=1451.485 H2S=1735.677 VOC=31031 -> low S=0 [local][0m
+[0;32mI (431645) FSM: T=32.2C RH=63% CO2=892 NH3=1436.206 H2S=1840.448 VOC=31031 -> low S=0 [local][0m
+[0;32mI (436645) FSM: T=32.2C RH=63% CO2=892 NH3=1459.951 H2S=1764.853 VOC=31025 -> low S=0 [local][0m
+[0;33mW (440365) httpd_txrx: httpd_sock_err: error in recv : 104[0m
+[0;33mW (440625) httpd_txrx: httpd_sock_err: error in recv : 104[0m
+[0;32mI (441645) FSM: T=32.3C RH=63% CO2=888 NH3=1437.582 H2S=1796.048 VOC=31024 -> low S=0 [local][0m
+[0;32mI (446645) FSM: T=32.3C RH=63% CO2=882 NH3=1438.961 H2S=1790.775 VOC=31024 -> low S=0 [local][0m
+[0;32mI (451645) FSM: T=32.3C RH=63% CO2=877 NH3=1439.651 H2S=1773.069 VOC=31021 -> low S=0 [local][0m
+[0;32mI (456645) FSM: T=32.3C RH=63% CO2=875 NH3=1420.559 H2S=1750.651 VOC=31023 -> low S=0 [local][0m
+[0;32mI (461645) FSM: T=32.3C RH=63% CO2=875 NH3=1450.083 H2S=1715.125 VOC=31021 -> low S=0 [local][0m
+[0;32mI (466645) FSM: T=32.3C RH=63% CO2=871 NH3=1415.862 H2S=1748.640 VOC=31025 -> low S=0 [local][0m
+[0;32mI (472645) FSM: T=32.2C RH=63% CO2=871 NH3=1414.525 H2S=1802.416 VOC=31020 -> low S=0 [local][0m
+[0;32mI (475925) WIFI: Thử kết nối mạng mới 'P402'[0m
+[0;33mW (475925) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (478645) FSM: T=32.2C RH=63% CO2=866 NH3=1435.519 H2S=1839.340 VOC=31024 -> low S=0 [local][0m
+[0;32mI (478905) wifi:primary chan differ, old=6, new=1, start CSA timer[0m
+[0;32mI (479305) wifi:switch to channel 1[0m
+[0;32mI (479305) wifi:ap channel adjust o:6,0 n:1,0[0m
+[0;32mI (479305) wifi:new:<1,1>, old:<6,0>, ap:<1,0>, sta:<0,0>, prof:6, snd_ch_cfg:0x0[0m
+[0;32mI (479305) wifi:new:<1,1>, old:<1,1>, ap:<1,0>, sta:<1,1>, prof:6, snd_ch_cfg:0x0[0m
+[0;32mI (479315) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (480315) wifi:state: auth -> init (0x200)[0m
+[0;32mI (480325) wifi:new:<1,0>, old:<1,1>, ap:<1,0>, sta:<1,1>, prof:6, snd_ch_cfg:0x0[0m
+[0;33mW (480325) WIFI: Mất kết nối 'P402', lý do 2[0m
+[0;32mI (481435) wifi:[ADDBA]RX DELBA, reason:39, delete tid:0, initiator:1(originator)[0m
+[0;32mI (481435) wifi:<ba-del>idx:2, tid:0[0m
+[0;33mW (484165) WIFI: Mất kết nối 'P402', lý do 205[0m
+[0;32mI (484645) FSM: T=32.3C RH=63% CO2=861 NH3=1398.672 H2S=1773.069 VOC=31027 -> low S=0 [local][0m
+[0;32mI (488005) wifi:new:<1,1>, old:<1,0>, ap:<1,0>, sta:<1,1>, prof:6, snd_ch_cfg:0x0[0m
+[0;32mI (488005) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (489005) wifi:state: auth -> init (0x200)[0m
+[0;32mI (489005) wifi:new:<1,0>, old:<1,1>, ap:<1,0>, sta:<1,1>, prof:6, snd_ch_cfg:0x0[0m
+[0;33mW (489005) WIFI: Mất kết nối 'P402', lý do 2[0m
+[0;33mW (489005) WIFI: Kết nối 'P402' thất bại: Sai mật khẩu WiFi[0m
+[0;32mI (489645) FSM: T=32.3C RH=63% CO2=854 NH3=1411.194 H2S=1779.280 VOC=31029 -> low S=0 [local][0m
+[0;32mI (495645) FSM: T=32.2C RH=63% CO2=855 NH3=1413.858 H2S=1767.925 VOC=31023 -> low S=0 [local][0m
+[0;32mI (500645) FSM: T=32.2C RH=63% CO2=855 NH3=1406.556 H2S=1716.093 VOC=31024 -> low S=0 [local][0m
+[0;32mI (505645) FSM: T=32.2C RH=63% CO2=854 NH3=1430.044 H2S=1756.710 VOC=31027 -> low S=0 [local][0m
+[0;32mI (510645) FSM: T=32.1C RH=63% CO2=851 NH3=1408.540 H2S=1747.636 VOC=31023 -> low S=0 [local][0m
+[0;32mI (515645) FSM: T=32.1C RH=63% CO2=848 NH3=1436.206 H2S=1706.460 VOC=31022 -> low S=0 [local][0m
+[0;32mI (520645) FSM: T=32.1C RH=63% CO2=846 NH3=1458.534 H2S=1782.400 VOC=31032 -> low S=0 [local][0m
+[0;32mI (525645) FSM: T=32.1C RH=63% CO2=843 NH3=1476.446 H2S=1816.363 VOC=31024 -> low S=0 [local][0m
+[0;32mI (530645) FSM: T=32.1C RH=63% CO2=840 NH3=1457.826 H2S=1791.828 VOC=31030 -> low S=0 [local][0m
+[0;32mI (535645) FSM: T=32.1C RH=63% CO2=838 NH3=1423.257 H2S=1791.828 VOC=31031 -> low S=0 [local][0m
+[0;32mI (540645) FSM: T=32.1C RH=63% CO2=835 NH3=1431.409 H2S=1800.289 VOC=31033 -> low S=0 [local][0m
+[0;32mI (545645) FSM: T=32.0C RH=64% CO2=837 NH3=1445.893 H2S=1768.952 VOC=31036 -> low S=0 [local][0m
+[0;32mI (551645) FSM: T=31.9C RH=64% CO2=838 NH3=1430.726 H2S=1744.631 VOC=31039 -> low S=0 [local][0m
+[0;32mI (556645) FSM: T=32.0C RH=64% CO2=836 NH3=1447.287 H2S=1768.952 VOC=31039 -> low S=0 [local][0m
+[0;32mI (561645) FSM: T=32.0C RH=64% CO2=836 NH3=1435.519 H2S=1791.828 VOC=31036 -> low S=0 [local][0m
+[0;32mI (566645) FSM: T=32.0C RH=64% CO2=832 NH3=1415.862 H2S=1762.810 VOC=31022 -> low S=0 [local][0m
+[0;32mI (571645) FSM: T=32.0C RH=64% CO2=830 NH3=1406.556 H2S=1785.532 VOC=31018 -> low S=0 [local][0m
+[0;32mI (576645) FSM: T=32.0C RH=64% CO2=832 NH3=1456.412 H2S=1793.936 VOC=31035 -> low S=0 [local][0m
+[0;32mI (581645) FSM: T=32.0C RH=64% CO2=831 NH3=1466.364 H2S=1832.718 VOC=31040 -> low S=0 [local][0m
+[0;32mI (586645) FSM: T=32.0C RH=64% CO2=831 NH3=1430.044 H2S=1806.685 VOC=31042 -> low S=0 [local][0m
+[0;32mI (591645) FSM: T=31.9C RH=64% CO2=833 NH3=1470.669 H2S=1799.227 VOC=31043 -> low S=0 [local][0m
+[0;32mI (596645) FSM: T=31.9C RH=64% CO2=834 NH3=1434.832 H2S=1798.166 VOC=31043 -> low S=0 [local][0m
+[0;32mI (601645) FSM: T=31.9C RH=64% CO2=832 NH3=1443.113 H2S=1808.828 VOC=31040 -> low S=0 [local][0m
+[0;32mI (606645) FSM: T=31.9C RH=64% CO2=834 NH3=1438.271 H2S=1847.124 VOC=31037 -> low S=0 [local][0m
+[0;32mI (611645) FSM: T=31.9C RH=64% CO2=834 NH3=1422.581 H2S=1818.528 VOC=31040 -> low S=0 [local][0m
+[0;32mI (616645) FSM: T=31.9C RH=64% CO2=832 NH3=1439.651 H2S=1783.443 VOC=31048 -> low S=0 [local][0m
+[0;32mI (621645) FSM: T=31.9C RH=64% CO2=831 NH3=1366.089 H2S=1760.772 VOC=31046 -> low S=0 [local][0m
+[0;32mI (626645) FSM: T=32.0C RH=64% CO2=829 NH3=1403.918 H2S=1699.779 VOC=31032 -> low S=0 [local][0m
+[0;32mI (631645) FSM: T=32.0C RH=64% CO2=827 NH3=1419.886 H2S=1766.900 VOC=31013 -> low S=0 [local][0m
+[0;32mI (267) esp_image: segment 3: paddr=001011f4 vaddr=3fc9d408 sizeI (1054) SCD41: SCD41 OK, serial 0x73CB59073BD3[0m
+[0;32mI (1054) SGP40: SGP40 OK, serial 0x000006F0219D[0m
+[0;32mI (1384) MQ: MQ136: R0 từ NVS = 0.16 kOhm[0m
+[0;32mI (1384) MQ: MQ136 sẵn sàng (GPIO 2, kênh 1, R0=0.16 kOhm)[0m
+[0;32mI (1384) MQ: MQ137: R0 từ NVS = 0.16 kOhm[0m
+[0;32mI (1384) MQ: MQ137 sẵn sàng (GPIO 1, kênh 0, R0=0.16 kOhm)[0m
+[0;32mI (1394) SENSOR: Cảm biến: SCD40(CO2+T+RH)=1 SGP40=1 MQ136=1 MQ137=1[0m
+[0;32mI (1394) pp: pp rom version: e7ae62f[0m
+[0;32mI (1404) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (1414) wifi:wifi driver task: 3fcedffc, prio:23, stack:6656, core=0[0m
+[0;32mI (1424) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (1424) wifi:wifi certification version: v7.0[0m
+[0;32mI (1424) wifi:config NVS flash: enabled[0m
+[0;32mI (1424) wifi:config nano formatting: disabled[0m
+[0;32mI (1424) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (1434) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (1434) wifi:Init management short buffer num: 32[0m
+[0;32mI (1434) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (1444) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (1444) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (1454) wifi:Init static rx buffer num: 10[0m
+[0;32mI (1454) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (1464) wifi_init: rx ba win: 6[0m
+[0;32mI (1464) wifi_init: accept mbox: 6[0m
+[0;32mI (1464) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1464) wifi_init: udp mbox: 6[0m
+[0;32mI (1474) wifi_init: tcp mbox: 6[0m
+[0;32mI (1474) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1474) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1484) wifi_init: tcp mss: 1440[0m
+[0;32mI (1484) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1484) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1494) WIFI: Chưa có mạng WiFi -> bật AP cấu hình[0m
+[0;32mI (1494) phy_init: phy_version 701,f4f1da3a,Mar  3 2025,15:50:10[0m
+[0;32mI (1544) wifi:mode : sta (90:da:72:75:f5:2c)[0m
+[0;32mI (1544) wifi:enable tsf[0m
+[0;32mI (1544) wifi:mode : sta (90:da:72:75:f5:2c) + softAP (90:da:72:75:f5:2d)[0m
+[0;32mI (1544) wifi:Total power save buffer number: 16[0m
+[0;32mI (1544) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (1554) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (1554) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (1554) wifi:Total power save buffer number: 16[0m
+[0;32mI (1564) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (1574) DNS: DNS captive đang chạy[0m
+[0;32mI (1584) PORTAL: Web cấu hình chạy tại http://192.168.4.1/[0m
+[0;32mI (1584) WIFI: AP cấu hình 'HopCom-F52D' đã bật, truy cập http://192.168.4.1[0m
+[0;32mI (1594) EVAL: Khôi phục phiên ee646b74 (com), tuổi 427s[0m
+[0;33mW (1604) mqtt5_client: Connect maximum_packet_size property is over buffer_size(2048), Please first change it[0m
+[0;32mI (1604) CLOUD: MQTT5: mqtt://192.168.1.10:1883, thiết bị hc-90da7275f52c, topic hopcom/v1/hc-90da7275f52c/...[0m
+[0;32mI (1614) MAIN: Khởi động xong[0m
+[0;32mI (1624) main_task: Returned from app_main()[0m
+[0;32mI (3254) FSM: BOOT -> WARMUP[0m
+[1;31mE (3254) i2c.master: I2C hardware NACK detected[0m
+[1;31mE (3254) i2c.master: I2C transaction unexpected nack detected[0m
+[1;31mE (3254) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[1;31mE (3264) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (3654) i2c.master: I2C transaction timeout detected[0m
+[1;31mE (3654) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[1;31mE (3654) i2c.master: i2c_master_receive(1268): I2C transaction failed[0m
+[0;32mI (5654) FSM: T=35.9C RH=51% CO2=849 NH3=1384.436 H2S=1695.984 VOC=30810 -> low S=0 [local][0m
+[0;32mI (10654) FSM: T=35.5C RH=52% CO2=853 NH3=1405.895 H2S=1685.631 VOC=30933 -> low S=0 [local][0m
+[0;32mI (15654) FSM: T=35.2C RH=53% CO2=858 NH3=1417.871 H2S=1725.831 VOC=30973 -> low S=0 [local][0m
+[1;31mE (17854) i2c.master: I2C hardware NACK detected[0m
+[1;31mE (17854) i2c.master: I2C transaction unexpected nack detected[0m
+[1;31mE (17854) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[1;31mE (17864) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (18514) i2c.master: I2C hardware NACK detected[0m
+[1;31mE (18714) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (18814) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (19714) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (19814) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (20714) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (20814) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (21714) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (21814) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (22714) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (22814) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (23514) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (23514) task_wdt:  - IDLE1 (CPU 1)[0m
+[1;31mE (23514) task_wdt: Tasks currently running:[0m
+[1;31mE (23514) task_wdt: CPU 0: IDLE0[0m
+[1;31mE (23514) task_wdt: CPU 1: app_fsm[0m
+[1;31mE (23514) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40377BDA:0x3FC9D820 0x40377065:0x3FC9D840 0x420BB245:0x3FCBBD60 0x420BB45C:0x3FCBBD90 0x420BB53E:0x3FCBBDD0 0x420BC112:0x3FCBBE00 0x420BC1EE:0x3FCBBEB0 0x4200DFB1:0x3FCBBEF0 0x4200D0DB:0x3FCBBFA0 0x4200D18C:0x3FCBC0E0 0x4037CF89:0x3FCBC150
+
+[1;31mE (23714) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (23814) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (24714) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (24814) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (25714) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (25814) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (26714) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (26814) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (27714) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (27814) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (28514) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (28514) task_wdt:  - IDLE1 (CPU 1)[0m
+[1;31mE (28514) task_wdt: Tasks currently running:[0m
+[1;31mE (28514) task_wdt: CPU 0: IDLE0[0m
+[1;31mE (28514) task_wdt: CPU 1: app_fsm[0m
+[1;31mE (28514) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40377BDA:0x3FC9D820 0x40377065:0x3FC9D840 0x420BB245:0x3FCBBD60 0x420BB45C:0x3FCBBD90 0x420BB53E:0x3FCBBDD0 0x420BC112:0x3FCBBE00 0x420BC1EE:0x3FCBBEB0 0x4200DFB1:0x3FCBBEF0 0x4200D0DB:0x3FCBBFA0 0x4200D18C:0x3FCBC0E0 0x4037CF89:0x3FCBC150
+
+[1;31mE (28714) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (28814) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (29714) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (29814) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (30714) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (30814) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (31714) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (31814) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (32714) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (32814) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (33514) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (33514) task_wdt:  - IDLE1 (CPU 1)[0m
+[1;31mE (33514) task_wdt: Tasks currently running:[0m
+[1;31mE (33514) task_wdt: CPU 0: IDLE0[0m
+[1;31mE (33514) task_wdt: CPU 1: app_fsm[0m
+[1;31mE (33514) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40377BDA:0x3FC9D820 0x40377065:0x3FC9D840 0x420BB245:0x3FCBBD60 0x420BB45C:0x3FCBBD90 0x420BB53E:0x3FCBBDD0 0x420BC112:0x3FCBBE00 0x420BC1EE:0x3FCBBEB0 0x4200DFB1:0x3FCBBEF0 0x4200D0DB:0x3FCBBFA0 0x4200D18C:0x3FCBC0E0 0x4037CF89:0x3FCBC150
+
+[1;31mE (33714) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (33814) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (34714) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (34814) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (35714) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (35814) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (36714) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (36814) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (37714) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (37814) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (38514) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (38514) task_wdt:  - IDLE1 (CPU 1)[0m
+[1;31mE (38514) task_wdt: Tasks currently running:[0m
+[1;31mE (38514) task_wdt: CPU 0: IDLE0[0m
+[1;31mE (38514) task_wdt: CPU 1: app_fsm[0m
+[1;31mE (38514) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40377BDA:0x3FC9D820 0x40377065:0x3FC9D840 0x420BB245:0x3FCBBD60 0x420BB45C:0x3FCBBD90 0x420BB53E:0x3FCBBDD0 0x420BC112:0x3FCBBE00 0x420BC1EE:0x3FCBBEB0 0x4200DFB1:0x3FCBBEF0 0x4200D0DB:0x3FCBBFA0 0x4200D18C:0x3FCBC0E0 0x4037CF89:0x3FCBC150
+
+[1;31mE (38714) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (38814) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (39714) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (39814) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;32mI (267) esp_image: segment 3: paddr=001011f4 vaddr=3fc9d408 sizeI (1054) SCD41: SCD41 OK, serial 0x73CB59073BD3[0m
+[0;32mI (1054) SGP40: SGP40 OK, serial 0x000006F0219D[0m
+[0;32mI (1384) MQ: MQ136: R0 từ NVS = 0.16 kOhm[0m
+[0;32mI (1384) MQ: MQ136 sẵn sàng (GPIO 2, kênh 1, R0=0.16 kOhm)[0m
+[0;32mI (1384) MQ: MQ137: R0 từ NVS = 0.16 kOhm[0m
+[0;32mI (1384) MQ: MQ137 sẵn sàng (GPIO 1, kênh 0, R0=0.16 kOhm)[0m
+[0;32mI (1394) SENSOR: Cảm biến: SCD40(CO2+T+RH)=1 SGP40=1 MQ136=1 MQ137=1[0m
+[0;32mI (1394) pp: pp rom version: e7ae62f[0m
+[0;32mI (1404) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (1414) wifi:wifi driver task: 3fcedffc, prio:23, stack:6656, core=0[0m
+[0;32mI (1424) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (1424) wifi:wifi certification version: v7.0[0m
+[0;32mI (1424) wifi:config NVS flash: enabled[0m
+[0;32mI (1424) wifi:config nano formatting: disabled[0m
+[0;32mI (1424) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (1434) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (1434) wifi:Init management short buffer num: 32[0m
+[0;32mI (1434) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (1444) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (1444) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (1454) wifi:Init static rx buffer num: 10[0m
+[0;32mI (1454) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (1464) wifi_init: rx ba win: 6[0m
+[0;32mI (1464) wifi_init: accept mbox: 6[0m
+[0;32mI (1464) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1464) wifi_init: udp mbox: 6[0m
+[0;32mI (1474) wifi_init: tcp mbox: 6[0m
+[0;32mI (1474) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1474) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1484) wifi_init: tcp mss: 1440[0m
+[0;32mI (1484) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1484) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1494) WIFI: Chưa có mạng WiFi -> bật AP cấu hình[0m
+[0;32mI (1494) phy_init: phy_version 701,f4f1da3a,Mar  3 2025,15:50:10[0m
+[0;32mI (1544) wifi:mode : sta (90:da:72:75:f5:2c)[0m
+[0;32mI (1544) wifi:enable tsf[0m
+[0;32mI (1544) wifi:mode : sta (90:da:72:75:f5:2c) + softAP (90:da:72:75:f5:2d)[0m
+[0;32mI (1544) wifi:Total power save buffer number: 16[0m
+[0;32mI (1544) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (1554) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (1554) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (1564) wifi:Total power save buffer number: 16[0m
+[0;32mI (1574) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (1584) DNS: DNS captive đang chạy[0m
+[0;32mI (1584) PORTAL: Web cấu hình chạy tại http://192.168.4.1/[0m
+[0;32mI (1584) WIFI: AP cấu hình 'HopCom-F52D' đã bật, truy cập http://192.168.4.1[0m
+[0;32mI (1594) EVAL: Khôi phục phiên ee646b74 (com), tuổi 427s[0m
+[0;33mW (1604) mqtt5_client: Connect maximum_packet_size property is over buffer_size(2048), Please first change it[0m
+[0;32mI (1614) CLOUD: MQTT5: mqtt://192.168.1.10:1883, thiết bị hc-90da7275f52c, topic hopcom/v1/hc-90da7275f52c/...[0m
+[0;32mI (1624) MAIN: Khởi động xong[0m
+[0;32mI (1624) main_task: Returned from app_main()[0m
+[0;32mI (3264) FSM: BOOT -> WARMUP[0m
+[0;32mI (5664) FSM: T=35.9C RH=51% CO2=989 NH3=1403.918 H2S=1669.870 VOC=30747 -> low S=0 [local][0m
+[0;32mI (10664) FSM: T=35.4C RH=53% CO2=994 NH3=1434.146 H2S=1712.227 VOC=30903 -> low S=0 [local][0m
+[0;32mI (15664) FSM: T=35.2C RH=53% CO2=999 NH3=1411.194 H2S=1816.363 VOC=30960 -> low S=0 [local][0m
+[0;32mI (16134) wifi:new:<6,0>, old:<6,1>, ap:<6,0>, sta:<0,0>, prof:6, snd_ch_cfg:0x0[0m
+[0;32mI (16134) wifi:station: 02:cc:52:3e:d0:2c join, AID=1, bgn, 20[0m
+[0;32mI (16144) WIFI: AP: 1 thiết bị đang kết nối[0m
+[0;32mI (16274) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+[0;32mI (18754) wifi:<ba-add>idx:2 (ifx:1, 02:cc:52:3e:d0:2c), tid:0, ssn:0, winSize:64[0m
+[0;33mW (18844) httpd_uri: httpd_uri: URI '/hotspot-detect.html' not found[0m
+[0;32mI (20664) FSM: T=34.9C RH=54% CO2=974 NH3=1428.682 H2S=1745.632 VOC=30986 -> low S=0 [local][0m
+[0;32mI (25664) FSM: T=34.7C RH=55% CO2=941 NH3=1427.322 H2S=1747.636 VOC=31006 -> low S=0 [local][0m
+[0;33mW (26584) httpd_uri: httpd_uri: URI '/hotspot-detect.html' not found[0m
+[0;33mW (26884) httpd_uri: httpd_uri: URI '/hotspot-detect.html' not found[0m
+[0;33mW (26944) httpd_uri: httpd_uri: URI '/hotspot-detect.html' not found[0m
+[0;32mI (30664) FSM: T=34.4C RH=55% CO2=941 NH3=1413.191 H2S=1728.774 VOC=31007 -> low S=0 [local][0m
+[0;32mI (35664) FSM: T=34.3C RH=56% CO2=912 NH3=1419.886 H2S=1767.925 VOC=31018 -> low S=0 [local][0m
+[0;32mI (38944) WIFI: Thử kết nối mạng mới 'Lâm Hoàng'[0m
+[0;33mW (38954) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (40664) FSM: T=34.1C RH=56% CO2=902 NH3=1424.609 H2S=1740.641 VOC=31022 -> low S=0 [local][0m
+[0;32mI (41924) wifi:new:<6,0>, old:<6,0>, ap:<6,0>, sta:<6,0>, prof:6, snd_ch_cfg:0x0[0m
+[0;32mI (41924) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (41934) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (41944) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (42004) wifi:connected with Lâm Hoàng, aid = 1, channel 6, BW20, bssid = ea:21:24:b9:bb:b6[0m
+[0;32mI (42004) wifi:security: WPA2-PSK, phy: bgn, rssi: -31[0m
+[0;32mI (42004) wifi:pm start, type: 1[0m
+
+[0;32mI (42004) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (42014) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (42194) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (43324) esp_netif_handlers: sta ip: 172.20.10.2, mask: 255.255.255.240, gw: 172.20.10.1[0m
+[0;32mI (43324) WIFI: Đã kết nối 'Lâm Hoàng', IP 172.20.10.2, RSSI -42[0m
+[0;32mI (43334) wifi:<ba-add>idx:0 (ifx:0, ea:21:24:b9:bb:b6), tid:0, ssn:2, winSize:64[0m
+[0;32mI (46664) FSM: T=34.0C RH=57% CO2=902 NH3=1436.206 H2S=1730.740 VOC=31028 -> low S=0 [local][0m
+[0;32mI (51664) FSM: T=33.8C RH=57% CO2=901 NH3=1401.946 H2S=1810.974 VOC=31033 -> low S=0 [local][0m
+[1;31mE (53334) esp-tls: [sock=56] select() timeout[0m
+[1;31mE (53334) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (53334) mqtt_client: Error transport connect[0m
+[0;33mW (55664) httpd_txrx: httpd_sock_err: error in recv : 104[0m
+[0;33mW (55744) httpd_txrx: httpd_sock_err: error in recv : 104[0m
+[0;32mI (56664) FSM: T=33.6C RH=58% CO2=899 NH3=1472.109 H2S=1742.634 VOC=31036 -> low S=0 [local][0m
+[0;32mI (61664) FSM: T=33.5C RH=58% CO2=896 NH3=1423.932 H2S=1719.003 VOC=31037 -> low S=0 [local][0m
+[0;32mI (67664) FSM: T=33.2C RH=59% CO2=894 NH3=1422.581 H2S=1834.920 VOC=31047 -> low S=0 [local][0m
+[1;31mE (70844) esp-tls: [sock=52] select() timeout[0m
+[1;31mE (70844) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (70844) mqtt_client: Error transport connect[0m
+[0;32mI (72664) FSM: T=33.0C RH=60% CO2=891 NH3=1433.461 H2S=1736.667 VOC=31053 -> low S=0 [local][0m
+[0;32mI (77664) FSM: T=33.0C RH=60% CO2=890 NH3=1444.502 H2S=1759.755 VOC=31061 -> low S=0 [local][0m
+[0;32mI (83664) FSM: T=32.9C RH=60% CO2=888 NH3=1422.581 H2S=1784.487 VOC=31061 -> low S=0 [local][0m
+[1;31mE (88354) esp-tls: [sock=52] select() timeout[0m
+[1;31mE (88354) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (88354) mqtt_client: Error transport connect[0m
+[0;32mI (88664) FSM: T=32.8C RH=60% CO2=887 NH3=1420.559 H2S=1715.125 VOC=31058 -> low S=0 [local][0m
+[0;32mI (93664) FSM: T=32.7C RH=61% CO2=886 NH3=1368.592 H2S=1707.419 VOC=31023 -> low S=0 [local][0m
+[0;32mI (98254) wifi:[ADDBA]RX DELBA, reason:1, delete tid:0, initiator:0(recipient)[0m
+[0;32mI (98664) FSM: T=32.7C RH=61% CO2=886 NH3=1418.542 H2S=1773.069 VOC=30988 -> low S=0 [local][0m
+[0;32mI (99854) wifi:[ADDBA]RX DELBA, reason:1, delete tid:0, initiator:0(recipient)[0m
+[0;32mI (100004) FSM: Nút OK: nhan[0m
+[0;33mW (100004) FSM: Bỏ qua màn hình làm nóng (kênh MQ vẫn chờ đủ thời gian)[0m
+[0;32mI (100004) FSM: WARMUP -> MONITOR[0m
+[0;32mI (102824) wifi:[ADDBA]RX DELBA, reason:1, delete tid:0, initiator:0(recipient)[0m
+[0;32mI (103664) FSM: T=32.6C RH=61% CO2=890 NH3=1423.932 H2S=1789.725 VOC=31034 -> low S=0 [local][0m
+[1;31mE (105864) esp-tls: [sock=52] select() timeout[0m
+[1;31mE (105864) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (105864) mqtt_client: Error transport connect[0m
+[0;32mI (108664) FSM: T=32.5C RH=62% CO2=888 NH3=1439.651 H2S=1791.828 VOC=31056 -> low S=0 [local][0m
+[0;32mI (113664) FSM: T=32.4C RH=62% CO2=889 NH3=1425.286 H2S=1752.666 VOC=31057 -> low S=0 [local][0m
+[0;32mI (118664) FSM: T=32.5C RH=62% CO2=887 NH3=1457.119 H2S=1792.881 VOC=31064 -> low S=0 [local][0m

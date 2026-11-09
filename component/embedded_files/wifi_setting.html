@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1f6f4a">
+<title>Cài đặt · Hộp cơm thông minh</title>
+<link rel="stylesheet" href="/wifi_setting.css">
+</head>
+<body>
+<main class="app">
+
+  <header class="brand">
+    <svg class="brand-logo" viewBox="0 0 48 48" aria-hidden="true">
+      <rect x="5" y="16" width="38" height="24" rx="6" class="logo-box"/>
+      <path d="M8 16c0-5 7-8 16-8s16 3 16 8" class="logo-lid"/>
+      <line x1="24" y1="20" x2="24" y2="36" class="logo-div"/>
+      <circle cx="15" cy="28" r="3" class="logo-dot"/>
+      <circle cx="33" cy="28" r="3" class="logo-dot"/>
+    </svg>
+    <div>
+      <h1>Hộp cơm thông minh</h1>
+      <p class="sub">Cài đặt WiFi, máy chủ và firmware</p>
+    </div>
+  </header>
+
+  <!-- Trạng thái kết nối hiện tại -->
+  <section class="card status" id="statusCard" data-state="loading">
+    <div class="status-head">
+      <span class="pulse" aria-hidden="true"></span>
+      <div class="status-text">
+        <p class="status-label" id="stLabel">Đang tải trạng thái…</p>
+        <p class="status-ssid" id="stSsid"></p>
+      </div>
+      <span class="signal" id="stSignal" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+    </div>
+    <dl class="status-meta" id="stMeta" hidden>
+      <div><dt>Địa chỉ IP</dt><dd id="stIp">—</dd></div>
+      <div><dt>Tín hiệu</dt><dd id="stRssi">—</dd></div>
+    </dl>
+    <div class="status-actions" id="stActions" hidden>
+      <button type="button" class="btn btn-ghost" id="btnDisconnect">Ngắt kết nối</button>
+      <button type="button" class="btn btn-ghost btn-accent" id="btnReconnect" hidden>Kết nối lại</button>
+      <button type="button" class="btn btn-ghost btn-danger" id="btnForget">Quên mạng này</button>
+    </div>
+  </section>
+
+  <!-- Thông báo kết quả / tiến trình -->
+  <div class="notice" id="notice" role="status" aria-live="polite" hidden>
+    <span class="notice-icon" aria-hidden="true"></span>
+    <div>
+      <p class="notice-title" id="noticeTitle"></p>
+      <p class="notice-body" id="noticeBody"></p>
+    </div>
+  </div>
+
+  <!-- Danh sách mạng -->
+  <section class="card">
+    <div class="card-head">
+      <h2>Mạng xung quanh</h2>
+      <button type="button" class="icon-btn" id="btnScan" aria-label="Quét lại">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.34-5.66M20 4v5h-5"/></svg>
+      </button>
+    </div>
+    <ul class="net-list" id="netList" aria-label="Danh sách mạng WiFi">
+      <li class="net-empty">Đang quét mạng…</li>
+    </ul>
+  </section>
+
+  <!-- Form kết nối -->
+  <section class="card">
+    <h2>Kết nối mạng</h2>
+    <form id="connectForm" autocomplete="off" novalidate>
+      <label class="field">
+        <span>Tên WiFi (SSID)</span>
+        <input type="text" id="ssid" name="ssid" maxlength="32" placeholder="Chọn ở danh sách hoặc nhập tay" autocapitalize="none" spellcheck="false" required>
+      </label>
+      <label class="field">
+        <span>Mật khẩu</span>
+        <div class="pass-wrap">
+          <input type="password" id="password" name="password" maxlength="64" placeholder="Để trống nếu là mạng mở" autocapitalize="none" spellcheck="false">
+          <button type="button" class="pass-toggle" id="btnShowPass" aria-label="Hiện mật khẩu">Hiện</button>
+        </div>
+      </label>
+      <p class="form-error" id="formError" hidden></p>
+      <button type="submit" class="btn btn-primary" id="btnConnect">
+        <span class="spinner" aria-hidden="true"></span>
+        <span class="btn-text">Kết nối</span>
+      </button>
+    </form>
+  </section>
+
+  <!-- Máy chủ MQTT -->
+  <section class="card" id="mqttCard">
+    <div class="card-head">
+      <h2>Máy chủ dữ liệu (MQTT)</h2>
+      <span class="pill" id="mqPill" data-kind="idle">—</span>
+    </div>
+    <p class="hint" id="mqStatus"></p>
+    <form id="mqttForm" autocomplete="off" novalidate>
+      <label class="field">
+        <span>Địa chỉ broker</span>
+        <input type="text" id="mqHost" maxlength="63" placeholder="broker.hivemq.com hoặc 192.168.1.10" autocapitalize="none" spellcheck="false" inputmode="url">
+      </label>
+      <div class="row">
+        <label class="field">
+          <span>Cổng</span>
+          <input type="number" id="mqPort" min="1" max="65535" inputmode="numeric" placeholder="1883">
+        </label>
+        <div class="field">
+          <span>Mã hoá TLS</span>
+          <label class="switch">
+            <input type="checkbox" id="mqTls">
+            <i aria-hidden="true"></i>
+            <b id="mqTlsText">Tắt</b>
+          </label>
+        </div>
+      </div>
+      <label class="field">
+        <span>Topic gốc (giống <code>--root</code> của server)</span>
+        <input type="text" id="mqRoot" maxlength="47" placeholder="hopcom-khkt2026" autocapitalize="none" spellcheck="false">
+      </label>
+      <details class="more" id="mqAuthBox">
+        <summary>Tài khoản đăng nhập broker</summary>
+        <label class="field">
+          <span>Tên đăng nhập</span>
+          <input type="text" id="mqUser" maxlength="63" placeholder="Để trống nếu broker không yêu cầu" autocapitalize="none" spellcheck="false">
+        </label>
+        <label class="field">
+          <span>Mật khẩu</span>
+          <div class="pass-wrap">
+            <input type="password" id="mqPass" maxlength="63" placeholder="Để trống nếu broker không yêu cầu" autocapitalize="none" spellcheck="false">
+            <button type="button" class="pass-toggle" id="mqShowPass" aria-label="Hiện mật khẩu">Hiện</button>
+          </div>
+        </label>
+        <label class="check" id="mqClearWrap" hidden>
+          <input type="checkbox" id="mqClearPass"> Xoá mật khẩu đã lưu
+        </label>
+      </details>
+      <details class="more" id="mqCaBox" hidden>
+        <summary>Chứng chỉ CA (chỉ cho broker tự ký)</summary>
+        <p class="hint">Để trống khi dùng broker công cộng (HiveMQ Cloud, EMQX Cloud…): thiết bị đã có sẵn chứng chỉ gốc. Với Mosquitto tự dựng, dán nội dung file <code>ca.crt</code> vào đây.</p>
+        <textarea id="mqCa" rows="6" spellcheck="false" placeholder="-----BEGIN CERTIFICATE-----&#10;...&#10;-----END CERTIFICATE-----"></textarea>
+      </details>
+      <p class="form-error" id="mqErr" hidden></p>
+      <div class="btn-row">
+        <button type="button" class="btn btn-ghost" id="mqReset">Mặc định</button>
+        <button type="submit" class="btn btn-primary" id="mqSave">
+          <span class="spinner" aria-hidden="true"></span>
+          <span class="btn-text">Lưu và kết nối</span>
+        </button>
+      </div>
+    </form>
+  </section>
+
+  <!-- Cập nhật firmware -->
+  <section class="card" id="otaCard">
+    <h2>Cập nhật firmware</h2>
+    <p class="hint" id="otaInfo">—</p>
+    <label class="file-pick" id="otaPick">
+      <input type="file" id="otaFile" accept=".bin,application/octet-stream">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4M7 9l5-5 5 5M5 20h14"/></svg>
+      <span id="otaName">Chọn file <b>hop_com_thong_minh.bin</b></span>
+    </label>
+    <div class="progress" id="otaBar" hidden><i id="otaFill"></i><span id="otaPct">0%</span></div>
+    <p class="form-error" id="otaErr" hidden></p>
+    <button type="button" class="btn btn-primary" id="otaStart" disabled>
+      <span class="spinner" aria-hidden="true"></span>
+      <span class="btn-text">Tải lên và cập nhật</span>
+    </button>
+  </section>
+
+  <footer class="foot" id="foot">
+    <span id="ftAp">—</span>
+    <span id="ftMac"></span>
+    <span id="ftFw"></span>
+  </footer>
+</main>
+<script src="/wifi_setting.js"></script>
+</body>
+</html>

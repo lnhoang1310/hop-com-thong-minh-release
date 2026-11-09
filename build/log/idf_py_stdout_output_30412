@@ -1,0 +1,132 @@
+Command: C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Espressif\frameworks\esp-idf-v5.5.1\tools/idf_monitor.py -p COM27 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 D:\PROJECT\KHKT\hop_com_thong_minh\build\hop_com_thong_minh.elf D:\PROJECT\KHKT\hop_com_thong_minh\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Espressif\frameworks\esp-idf-v5.5.1\tools\idf.py' '-p' 'COM27'
+[0;32mI (120) esp_image: segment 1: paddr=0003da10 vaddr=3fc9ae00 sizeESP-ROM:esp32s3-20210327[0m
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x28 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4037a026
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x158c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f34
+entry 0x403c8924
+[0;32mI (24) boot: ESP-IDF v5.5.1-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Nov  8 2026 08:50:24[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (28) boot: efuse block revision: v1.4[0m
+[0;32mI (32) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (36) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32s3: SPI Flash Size : 4MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (48) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (70) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3c0d0020 size=2d9e8h (186856) map[0m
+[0;32mI (120) esp_image: segment 1: paddr=0003da10 vaddr=3fc9ae00 size=02608h (  9736) load[0m
+[0;32mI (122) esp_image: segment 2: paddr=00040020 vaddr=42000020 size=c11cch (790988) map[0m
+[0;32mI (263) esp_image: segment 3: paddr=001011f4 vaddr=3fc9d408 size=0250ch (  9484) load[0m
+[0;32mI (265) esp_image: segment 4: paddr=00103708 vaddr=40374000 size=16d94h ( 93588) load[0m
+[0;32mI (287) esp_image: segment 5: paddr=0011a4a4 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (296) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (297) boot: Disabling RNG early entropy source...[0m
+[0;32mI (307) cpu_start: Multicore app[0m
+[0;32mI (316) cpu_start: Pro cpu start user code[0m
+[0;32mI (316) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (316) app_init: Application information:[0m
+[0;32mI (316) app_init: Project name:     hop_com_thong_minh[0m
+[0;32mI (321) app_init: App version:      1[0m
+[0;32mI (324) app_init: Compile time:     Nov  8 2026 08:50:05[0m
+[0;32mI (329) app_init: ELF file SHA256:  a7744cc0c...[0m
+[0;32mI (334) app_init: ESP-IDF:          v5.5.1-dirty[0m
+[0;32mI (338) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (342) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (346) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (350) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (356) heap_init: At 3FCA5010 len 00044700 (273 KiB): RAM[0m
+[0;32mI (361) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (366) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (371) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (378) spi_flash: detected chip: generic[0m
+[0;32mI (380) spi_flash: flash io: dio[0m
+[0;32mI (384) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (390) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (397) main_task: Started on CPU0[0m
+[0;32mI (407) main_task: Calling app_main()[0m
+[0;32mI (407) MAIN: === Hop com thong minh khoi dong ===[0m
+[0;32mI (427) I2C:   0x3C OLED   OK[0m
+[0;32mI (427) I2C:   0x62 SCD40  OK[0m
+[0;32mI (427) I2C:   0x59 SGP40  OK[0m
+[0;32mI (457) OLED: OLED SH1106 sẵn sàng[0m
+[0;32mI (1007) SCD41: SCD41 OK, serial 0x73CB59073BD3[0m
+[0;32mI (1007) SGP40: SGP40 OK, serial 0x000006F0219D[0m
+[0;32mI (1337) MQ: MQ136: R0 từ NVS = 0.16 kOhm[0m
+[0;32mI (1337) MQ: MQ136 sẵn sàng (GPIO 2, kênh 1, R0=0.16 kOhm)[0m
+[0;32mI (1337) MQ: MQ137: R0 từ NVS = 0.16 kOhm[0m
+[0;32mI (1337) MQ: MQ137 sẵn sàng (GPIO 1, kênh 0, R0=0.16 kOhm)[0m
+[0;32mI (1347) SENSOR: Cảm biến: SCD40(CO2+T+RH)=1 SGP40=1 MQ136=1 MQ137=1[0m
+[0;32mI (1347) pp: pp rom version: e7ae62f[0m
+[0;32mI (1357) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (1367) wifi:wifi driver task: 3fcedf78, prio:23, stack:6656, core=0[0m
+[0;32mI (1377) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (1377) wifi:wifi certification version: v7.0[0m
+[0;32mI (1377) wifi:config NVS flash: enabled[0m
+[0;32mI (1377) wifi:config nano formatting: disabled[0m
+[0;32mI (1377) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (1387) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (1387) wifi:Init management short buffer num: 32[0m
+[0;32mI (1387) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (1397) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (1397) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (1407) wifi:Init static rx buffer num: 10[0m
+[0;32mI (1407) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (1417) wifi_init: rx ba win: 6[0m
+[0;32mI (1417) wifi_init: accept mbox: 6[0m
+[0;32mI (1417) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1417) wifi_init: udp mbox: 6[0m
+[0;32mI (1427) wifi_init: tcp mbox: 6[0m
+[0;32mI (1427) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1427) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1437) wifi_init: tcp mss: 1440[0m
+[0;32mI (1437) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1437) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1447) WIFI: Chưa có mạng WiFi -> bật AP cấu hình[0m
+[0;32mI (1447) phy_init: phy_version 701,f4f1da3a,Mar  3 2025,15:50:10[0m
+[0;32mI (1497) wifi:mode : sta (90:da:72:75:f5:2c)[0m
+[0;32mI (1497) wifi:enable tsf[0m
+[0;32mI (1497) wifi:mode : sta (90:da:72:75:f5:2c) + softAP (90:da:72:75:f5:2d)[0m
+[0;32mI (1497) wifi:Total power save buffer number: 16[0m
+[0;32mI (1497) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (1507) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (1507) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (1517) wifi:Total power save buffer number: 16[0m
+[0;32mI (1527) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (1537) DNS: DNS captive đang chạy[0m
+[0;32mI (1537) PORTAL: Web cấu hình chạy tại http://192.168.4.1/[0m
+[0;32mI (1537) WIFI: AP cấu hình 'HopCom-F52D' đã bật, truy cập http://192.168.4.1[0m
+[0;32mI (1547) EVAL: Phiên mới ee646b74, món com[0m
+[0;33mW (1557) mqtt5_client: Connect maximum_packet_size property is over buffer_size(2048), Please first change it[0m
+[0;32mI (1557) CLOUD: MQTT5: mqtt://192.168.1.10:1883, thiết bị hc-90da7275f52c, topic hopcom/v1/hc-90da7275f52c/...[0m
+[0;32mI (1567) MAIN: Khởi động xong[0m
+[0;32mI (1577) main_task: Returned from app_main()[0m
+[0;32mI (3207) FSM: BOOT -> WARMUP[0m
+[0;32mI (5607) FSM: T=32.9C RH=56% CO2=743 NH3=1469.949 H2S=1789.725 VOC=31017 -> invalid S=0 [local][0m
+[0;32mI (10607) FSM: T=32.5C RH=58% CO2=725 NH3=1482.268 H2S=1818.528 VOC=31143 -> invalid S=0 [local][0m
+[0;32mI (15607) FSM: T=32.3C RH=58% CO2=745 NH3=1511.290 H2S=1804.548 VOC=31177 -> invalid S=0 [local][0m
+[0;32mI (20607) FSM: T=32.1C RH=59% CO2=733 NH3=1514.329 H2S=1792.881 VOC=31188 -> invalid S=0 [local][0m
+[0;32mI (25437) FSM: Nút DOWN: nhan[0m
+[0;32mI (25607) FSM: T=31.8C RH=60% CO2=751 NH3=1499.253 H2S=1782.400 VOC=31193 -> invalid S=0 [local][0m
+[0;32mI (26977) FSM: Nút DOWN: nhan[0m
+[0;32mI (30607) FSM: T=31.7C RH=61% CO2=752 NH3=1536.714 H2S=1745.632 VOC=31186 -> invalid S=0 [local][0m
+[0;32mI (36607) FSM: T=31.6C RH=61% CO2=759 NH3=1511.290 H2S=1796.048 VOC=31175 -> invalid S=0 [local][0m
+[0;32mI (41607) FSM: T=31.4C RH=62% CO2=745 NH3=1507.509 H2S=1789.725 VOC=31179 -> invalid S=0 [local][0m
+[0;32mI (46607) FSM: T=31.3C RH=63% CO2=748 NH3=1408.540 H2S=1802.416 VOC=31152 -> invalid S=0 [local][0m
+[0;32mI (51607) FSM: T=31.2C RH=63% CO2=744 NH3=1500.747 H2S=1727.792 VOC=31103 -> invalid S=0 [local][0m
+[0;32mI (56607) FSM: T=31.1C RH=64% CO2=747 NH3=1462.795 H2S=1843.780 VOC=31132 -> invalid S=0 [local][0m
+[0;32mI (61607) FSM: T=31.0C RH=64% CO2=752 NH3=1510.532 H2S=1865.159 VOC=31129 -> invalid S=0 [local][0m
+[0;32mI (67607) FSM: T=30.9C RH=65% CO2=759 NH3=1497.016 H2S=1793.936 VOC=31147 -> invalid S=0 [local][0m
+[0;32mI (72607) FSM: T=30.8C RH=65% CO2=763 NH3=1498.506 H2S=1829.424 VOC=31130 -> invalid S=0 [local][0m
+[0;32mI (77607) FSM: T=30.8C RH=65% CO2=767 NH3=1503.745 H2S=1787.626 VOC=31128 -> invalid S=0 [local][0m
+[0;32mI (82607) FSM: T=30.8C RH=66% CO2=767 NH3=1510.532 H2S=1803.482 VOC=31127 -> invalid S=0 [local][0m

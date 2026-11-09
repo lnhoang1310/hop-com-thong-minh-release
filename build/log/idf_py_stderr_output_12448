@@ -1,0 +1,35 @@
+Command: C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Espressif\frameworks\esp-idf-v5.5.1\tools/idf_monitor.py -p COM27 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 D:\PROJECT\KHKT\hop_com_thong_minh\build\hop_com_thong_minh.elf D:\PROJECT\KHKT\hop_com_thong_minh\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Espressif\frameworks\esp-idf-v5.5.1\tools\idf.py' '-p' 'COM27'
+[0;33m--- Warning: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM27 instead...[0m
+[0;33m--- esp-idf-monitor 1.8.0 on \\.\COM27 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[1;31m--- Error: ClearCommError failed (PermissionError(13, 'The device does not recognize the command.', None, 22))[0m
+[0;33m--- Waiting for the device to reconnect[0m[0m--- 0x4037a026: [0;33mesp_cpu_wait_for_intr[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/esp_hw_support/cpu.c[0m[0m:[1;31m64[0m
+[0m--- 0x403c8700: [0;33m_stext[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x403c8924: [0;33mcall_start_cpu0[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m[0m
+[0m--- 0x40377bda: [0;33mesp_crosscore_isr[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/esp_system/crosscore_int.c[0m[0m:[1;31m74[0m
+[0m--- 0x40377065: [0;33m_xt_lowint1[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x420ba962: [0;33mi2c_ll_is_bus_busy[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/hal/esp32s3/include/hal/i2c_ll.h[0m[0m:[1;31m577[0m
+[0m--- (inlined by) [0;33ms_i2c_send_commands[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/esp_driver_i2c/i2c_master.c[0m[0m:[1;31m543[0m
+[0m--- 0x420bab70: [0;33ms_i2c_transaction_start[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/esp_driver_i2c/i2c_master.c[0m[0m:[1;31m649[0m
+[0m--- 0x420bac52: [0;33ms_i2c_synchronous_transaction[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/esp_driver_i2c/i2c_master.c[0m[0m:[1;31m945[0m
+[0m--- 0x420bb826: [0;33mi2c_master_multi_buffer_transmit[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/esp_driver_i2c/i2c_master.c[0m[0m:[1;31m1214[0m
+[0m--- 0x420bb902: [0;33mi2c_master_transmit[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/esp_driver_i2c/i2c_master.c[0m[0m:[1;31m1229[0m
+[0m--- 0x4200e0ad: [0;33moled_flush[0m[0m at [0;32mD:/PROJECT/KHKT/hop_com_thong_minh/component/display/oled_sh1106.c[0m[0m:[1;31m128[0m
+[0m--- 0x4200d215: [0;33mrender[0m[0m at [0;32mD:/PROJECT/KHKT/hop_com_thong_minh/component/application/app_fsm.c[0m[0m:[1;31m415[0m
+[0m--- 0x4200d28c: [0;33mfsm_task[0m[0m at [0;32mD:/PROJECT/KHKT/hop_com_thong_minh/component/application/app_fsm.c[0m[0m:[1;31m482[0m
+[0m--- 0x4037cf89: [0;33mvPortTaskWrapper[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m--- 0x40377bda: [0;33mesp_crosscore_isr[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/esp_system/crosscore_int.c[0m[0m:[1;31m74[0m
+[0m--- 0x40377065: [0;33m_xt_lowint1[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x420ba962: [0;33mi2c_ll_is_bus_busy[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/hal/esp32s3/include/hal/i2c_ll.h[0m[0m:[1;31m577[0m
+[0m--- (inlined by) [0;33ms_i2c_send_commands[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/esp_driver_i2c/i2c_master.c[0m[0m:[1;31m543[0m
+[0m--- 0x420bab70: [0;33ms_i2c_transaction_start[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/esp_driver_i2c/i2c_master.c[0m[0m:[1;31m649[0m
+[0m--- 0x420bac52: [0;33ms_i2c_synchronous_transaction[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/esp_driver_i2c/i2c_master.c[0m[0m:[1;31m945[0m
+[0m--- 0x420bb826: [0;33mi2c_master_multi_buffer_transmit[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/esp_driver_i2c/i2c_master.c[0m[0m:[1;31m1214[0m
+[0m--- 0x420bb902: [0;33mi2c_master_transmit[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/esp_driver_i2c/i2c_master.c[0m[0m:[1;31m1229[0m
+[0m--- 0x4200e0ad: [0;33moled_flush[0m[0m at [0;32mD:/PROJECT/KHKT/hop_com_thong_minh/component/display/oled_sh1106.c[0m[0m:[1;31m128[0m
+[0m--- 0x4200d215: [0;33mrender[0m[0m at [0;32mD:/PROJECT/KHKT/hop_com_thong_minh/component/application/app_fsm.c[0m[0m:[1;31m415[0m
+[0m--- 0x4200d28c: [0;33mfsm_task[0m[0m at [0;32mD:/PROJECT/KHKT/hop_com_thong_minh/component/application/app_fsm.c[0m[0m:[1;31m482[0m
+[0m--- 0x4037cf89: [0;33mvPortTaskWrapper[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m

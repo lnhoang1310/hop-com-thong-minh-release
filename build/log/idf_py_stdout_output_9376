@@ -1,0 +1,223 @@
+Command: C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Espressif\frameworks\esp-idf-v5.5.1\tools/idf_monitor.py -p COM27 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 D:\PROJECT\KHKT\hop_com_thong_minh\build\hop_com_thong_minh.elf D:\PROJECT\KHKT\hop_com_thong_minh\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Espressif\frameworks\esp-idf-v5.5.1\tools\idf.py' '-p' 'COM27'
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x28 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4037a026
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x158c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f34
+entry 0x403c8924
+[0;32mI (24) boot: ESP-IDF v5.5.1-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Nov  8 2026 08:50:24[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (28) boot: efuse block revision: v1.4[0m
+[0;32mI (32) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (36) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32s3: SPI Flash Size : 4MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (48) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (70) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3c0d0020 size=2de40h (187968) map[0m
+[0;32mI (120) esp_image: segment 1: paddr=0003de68 vaddr=3fc9ae00 size=021b0h (  8624) load[0m
+[0;32mI (122) esp_image: segment 2: paddr=00040020 vaddr=42000020 size=c0b88h (789384) map[0m
+[0;32mI (263) esp_image: segment 3: paddr=00100bb0 vaddr=3fc9cfb0 size=02984h ( 10628) load[0m
+[0;32mI (265) esp_image: segment 4: paddr=0010353c vaddr=40374000 size=16d94h ( 93588) load[0m
+[0;32mI (287) esp_image: segment 5: paddr=0011a2d8 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (296) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (297) boot: Disabling RNG early entropy source...[0m
+[0;32mI (307) cpu_start: Multicore app[0m
+[0;32mI (316) cpu_start: Pro cpu start user code[0m
+[0;32mI (316) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (316) app_init: Application information:[0m
+[0;32mI (316) app_init: Project name:     hop_com_thong_minh[0m
+[0;32mI (321) app_init: App version:      1[0m
+[0;32mI (324) app_init: Compile time:     Nov  8 2026 08:50:05[0m
+[0;32mI (329) app_init: ELF file SHA256:  ddf7f4fc7...[0m
+[0;32mI (333) app_init: ESP-IDF:          v5.5.1-dirty[0m
+[0;32mI (338) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (342) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (346) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (350) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (356) heap_init: At 3FCA4F28 len 000447E8 (273 KiB): RAM[0m
+[0;32mI (361) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (366) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (371) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (378) spi_flash: detected chip: generic[0m
+[0;32mI (380) spi_flash: flash io: dio[0m
+[0;32mI (384) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (390) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (397) main_task: Started on CPU0[0m
+[0;32mI (407) main_task: Calling app_main()[0m
+[0;32mI (407) MAIN: === Hop com thong minh khoi dong ===[0m
+[0;32mI (427) I2C:   0x3C OLED   OK[0m
+[0;32mI (427) I2C:   0x62 SCD40  OK[0m
+[0;32mI (427) I2C:   0x59 SGP40  OK[0m
+[0;32mI (537) OLED: OLED SH1106 sẵn sàng[0m
+[1;31mE (537) i2c.master: I2C transaction unexpected nack detected[0m
+[1;31mE (537) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[1;31mE (537) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;32mI (1097) SCD41: SCD41 OK, serial 0x73CB59073BD3[0m
+[0;32mI (1097) SGP40: SGP40 OK, serial 0x000006F0219D[0m
+[0;32mI (1427) MQ: MQ136: R0 từ NVS = 0.16 kOhm[0m
+[0;32mI (1427) MQ: MQ136 sẵn sàng (GPIO 2, kênh 1, R0=0.16 kOhm)[0m
+[0;32mI (1427) MQ: MQ137: R0 từ NVS = 0.16 kOhm[0m
+[0;32mI (1427) MQ: MQ137 sẵn sàng (GPIO 1, kênh 0, R0=0.16 kOhm)[0m
+[0;32mI (1437) SENSOR: Cảm biến: SCD40(CO2+T+RH)=1 SGP40=1 MQ136=1 MQ137=1[0m
+[0;32mI (1437) pp: pp rom version: e7ae62f[0m
+[0;32mI (1447) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (1457) wifi:wifi driver task: 3fcee01c, prio:23, stack:6656, core=0[0m
+[0;32mI (1467) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (1467) wifi:wifi certification version: v7.0[0m
+[0;32mI (1467) wifi:config NVS flash: enabled[0m
+[0;32mI (1467) wifi:config nano formatting: disabled[0m
+[0;32mI (1467) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (1477) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (1477) wifi:Init management short buffer num: 32[0m
+[0;32mI (1487) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (1487) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (1487) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (1497) wifi:Init static rx buffer num: 10[0m
+[0;32mI (1497) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (1507) wifi_init: rx ba win: 6[0m
+[0;32mI (1507) wifi_init: accept mbox: 6[0m
+[0;32mI (1507) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1507) wifi_init: udp mbox: 6[0m
+[0;32mI (1517) wifi_init: tcp mbox: 6[0m
+[0;32mI (1517) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1517) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1527) wifi_init: tcp mss: 1440[0m
+[0;32mI (1527) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1527) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1537) WIFI: Mạng đã lưu: 'Lâm Hoàng'[0m
+[0;33mW (1537) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (1547) phy_init: phy_version 701,f4f1da3a,Mar  3 2025,15:50:10[0m
+[0;32mI (1587) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (1617) wifi:mode : sta (90:da:72:75:f5:2c)[0m
+[0;32mI (1617) wifi:enable tsf[0m
+[0;32mI (1617) EVAL: Khôi phục phiên e7ce68f6 (com), tuổi 309s[0m
+[0;32mI (1617) CLOUD: MQTT: mqtt://broker.hivemq.com:1883, client hc-90da7275f52c, topic hopcom-khkt2026/...[0m
+[0;32mI (1627) MAIN: Khởi động xong[0m
+[0;32mI (1627) main_task: Returned from app_main()[0m
+[0;32mI (3287) FSM: BOOT -> WARMUP[0m
+[0;33mW (4027) WIFI: Mất kết nối 'Lâm Hoàng', lý do 201[0m
+[0;32mI (5667) FSM: T=33.6C RH=61% CO2=694 NH3=1202.897 H2S=1240.743 VOC=31131 -> low S=0 [offline][0m
+[0;33mW (8437) WIFI: Mất kết nối 'Lâm Hoàng', lý do 201[0m
+[0;32mI (10667) FSM: T=33.3C RH=62% CO2=719 NH3=1120.032 H2S=1208.804 VOC=31155 -> low S=0 [offline][0m
+[0;33mW (14857) WIFI: Mất kết nối 'Lâm Hoàng', lý do 201[0m
+[0;32mI (15667) FSM: T=33.0C RH=63% CO2=759 NH3=1130.824 H2S=1198.503 VOC=31164 -> low S=0 [offline][0m
+[0;32mI (20667) FSM: T=32.8C RH=64% CO2=754 NH3=1171.834 H2S=1214.766 VOC=31226 -> low S=0 [offline][0m
+[0;33mW (25267) WIFI: Mất kết nối 'Lâm Hoàng', lý do 201[0m
+[0;32mI (25667) FSM: T=32.5C RH=64% CO2=755 NH3=1149.857 H2S=1197.045 VOC=31254 -> low S=0 [offline][0m
+[0;32mI (30667) FSM: T=32.4C RH=65% CO2=742 NH3=1149.408 H2S=1211.282 VOC=31266 -> low S=0 [offline][0m
+[0;32mI (35667) FSM: T=32.2C RH=66% CO2=736 NH3=1170.902 H2S=1224.322 VOC=31273 -> low S=0 [offline][0m
+[0;32mI (40667) FSM: T=32.0C RH=66% CO2=735 NH3=1167.653 H2S=1240.224 VOC=31274 -> low S=0 [offline][0m
+[0;33mW (43687) WIFI: Mất kết nối 'Lâm Hoàng', lý do 201[0m
+[0;33mW (43687) WIFI: Không kết nối được mạng đã lưu -> bật AP cấu hình[0m
+[0;32mI (43687) wifi:mode : sta (90:da:72:75:f5:2c) + softAP (90:da:72:75:f5:2d)[0m
+[0;32mI (43687) wifi:Total power save buffer number: 16[0m
+[0;32mI (43697) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (43697) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (43707) wifi:Total power save buffer number: 16[0m
+[0;32mI (43707) PORTAL: Web cấu hình chạy tại http://192.168.4.1/[0m
+[0;32mI (43717) DNS: DNS captive đang chạy[0m
+[0;32mI (43717) WIFI: AP cấu hình 'HopCom-F52D' đã bật, truy cập http://192.168.4.1[0m
+[0;32mI (43727) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (43737) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (45667) FSM: T=31.8C RH=67% CO2=727 NH3=1166.265 H2S=1307.395 VOC=31278 -> low S=0 [offline][0m
+[0;32mI (50667) FSM: T=31.7C RH=67% CO2=725 NH3=1232.994 H2S=1289.261 VOC=31283 -> low S=0 [offline][0m
+[0;32mI (55667) FSM: T=31.6C RH=68% CO2=723 NH3=1176.513 H2S=1275.973 VOC=31286 -> low S=0 [offline][0m
+[0;32mI (60667) FSM: T=31.5C RH=68% CO2=719 NH3=1165.803 H2S=1294.876 VOC=31283 -> low S=0 [offline][0m
+[0;32mI (65667) FSM: T=31.4C RH=69% CO2=718 NH3=1173.701 H2S=1256.524 VOC=31283 -> low S=0 [offline][0m
+[0;32mI (70667) FSM: T=31.3C RH=69% CO2=712 NH3=1172.767 H2S=1275.424 VOC=31278 -> low S=0 [offline][0m
+[0;32mI (75667) FSM: T=31.2C RH=69% CO2=703 NH3=1157.095 H2S=1248.586 VOC=31283 -> low S=0 [offline][0m
+[0;33mW (78517) WIFI: Mất kết nối 'Lâm Hoàng', lý do 201[0m
+[0;32mI (80667) FSM: T=31.0C RH=70% CO2=697 NH3=1158.006 H2S=1239.704 VOC=31279 -> low S=0 [offline][0m
+[0;32mI (85667) FSM: T=30.9C RH=70% CO2=694 NH3=1162.122 H2S=1243.869 VOC=31284 -> low S=0 [offline][0m
+[0;32mI (90667) FSM: T=30.9C RH=71% CO2=691 NH3=1161.663 H2S=1208.310 VOC=31283 -> low S=0 [offline][0m
+[0;32mI (95667) FSM: T=30.8C RH=71% CO2=688 NH3=1164.420 H2S=1266.717 VOC=31287 -> low S=0 [offline][0m
+[0;32mI (100667) FSM: T=30.8C RH=71% CO2=685 NH3=1161.205 H2S=1255.460 VOC=31287 -> low S=0 [offline][0m
+[0;32mI (105667) FSM: T=30.7C RH=71% CO2=681 NH3=1173.701 H2S=1293.186 VOC=31285 -> low S=0 [offline][0m
+[0;32mI (110667) FSM: T=30.7C RH=71% CO2=663 NH3=1175.574 H2S=1265.637 VOC=31287 -> low S=0 [offline][0m
+[0;32mI (115667) FSM: T=30.6C RH=72% CO2=641 NH3=1174.169 H2S=1221.793 VOC=31292 -> low S=0 [offline][0m
+[0;32mI (120667) FSM: T=30.6C RH=72% CO2=637 NH3=1158.462 H2S=1256.524 VOC=31285 -> low S=3 [offline][0m
+[0;32mI (120667) FSM: WARMUP -> SELECT_FOOD[0m
+[0;32mI (125667) FSM: T=30.6C RH=72% CO2=634 NH3=1166.727 H2S=1304.529 VOC=31288 -> low S=2 [offline][0m
+[0;32mI (130667) FSM: T=30.5C RH=72% CO2=631 NH3=1176.044 H2S=1267.258 VOC=31264 -> low S=3 [offline][0m
+[0;32mI (135667) FSM: T=30.5C RH=72% CO2=629 NH3=1199.477 H2S=1271.601 VOC=31285 -> low S=2 [offline][0m
+[0;33mW (141357) WIFI: Mất kết nối 'Lâm Hoàng', lý do 201[0m
+[0;32mI (141667) FSM: T=30.4C RH=72% CO2=626 NH3=1173.234 H2S=1292.062 VOC=31291 -> low S=2 [offline][0m
+[0;32mI (146667) FSM: T=30.3C RH=73% CO2=624 NH3=1186.933 H2S=1318.394 VOC=31290 -> low S=2 [offline][0m
+[0;32mI (151667) FSM: T=30.3C RH=73% CO2=622 NH3=1222.298 H2S=1273.237 VOC=31298 -> low S=2 [offline][0m
+[0;32mI (156667) FSM: T=30.3C RH=73% CO2=620 NH3=1186.933 H2S=1272.691 VOC=31295 -> low S=3 [offline][0m
+[0;32mI (161667) FSM: T=30.3C RH=73% CO2=620 NH3=1203.878 H2S=1297.135 VOC=31289 -> low S=2 [offline][0m
+[0;32mI (166667) FSM: T=30.3C RH=73% CO2=619 NH3=1205.352 H2S=1291.501 VOC=31300 -> low S=2 [offline][0m
+[0;32mI (171667) FSM: T=30.3C RH=73% CO2=617 NH3=1206.829 H2S=1319.562 VOC=31296 -> low S=2 [offline][0m
+[0;32mI (176667) FSM: T=30.3C RH=73% CO2=612 NH3=1213.271 H2S=1307.969 VOC=31297 -> low S=2 [offline][0m
+[0;32mI (181667) FSM: T=30.4C RH=73% CO2=611 NH3=1211.778 H2S=1326.022 VOC=31294 -> low S=2 [offline][0m
+[0;32mI (186667) FSM: T=30.4C RH=73% CO2=610 NH3=1206.829 H2S=1293.186 VOC=31298 -> low S=2 [offline][0m
+[0;32mI (191667) FSM: T=30.3C RH=73% CO2=606 NH3=1214.267 H2S=1326.613 VOC=31291 -> low S=2 [offline][0m
+[0;32mI (196667) FSM: T=30.3C RH=73% CO2=603 NH3=1204.860 H2S=1293.186 VOC=31291 -> low S=2 [offline][0m
+[0;32mI (202667) FSM: T=30.3C RH=73% CO2=600 NH3=1215.266 H2S=1356.781 VOC=31297 -> low S=1 [offline][0m
+[0;33mW (204197) WIFI: Mất kết nối 'Lâm Hoàng', lý do 201[0m
+[0;32mI (207667) FSM: T=30.2C RH=73% CO2=598 NH3=1210.785 H2S=1324.843 VOC=31291 -> low S=2 [offline][0m
+[0;32mI (212667) FSM: T=30.2C RH=73% CO2=597 NH3=1221.793 H2S=1351.866 VOC=31292 -> low S=2 [offline][0m
+[0;32mI (217667) FSM: T=30.2C RH=73% CO2=595 NH3=1216.766 H2S=1288.143 VOC=31298 -> low S=2 [offline][0m
+[0;32mI (222667) FSM: T=30.2C RH=73% CO2=594 NH3=1212.773 H2S=1310.849 VOC=31297 -> low S=2 [offline][0m
+[0;32mI (227667) FSM: T=30.3C RH=73% CO2=592 NH3=1230.943 H2S=1356.781 VOC=31297 -> low S=1 [offline][0m
+[0;32mI (232667) FSM: T=30.3C RH=73% CO2=590 NH3=1209.299 H2S=1322.491 VOC=31281 -> low S=2 [offline][0m
+[0;32mI (237667) FSM: T=30.3C RH=73% CO2=590 NH3=1191.247 H2S=1317.228 VOC=31280 -> low S=2 [offline][0m
+[0;32mI (242667) FSM: T=30.3C RH=73% CO2=588 NH3=1203.388 H2S=1372.993 VOC=31280 -> low S=1 [offline][0m
+[0;32mI (247667) FSM: T=30.4C RH=73% CO2=587 NH3=1215.766 H2S=1311.427 VOC=31282 -> low S=2 [offline][0m
+[0;32mI (252667) FSM: T=30.3C RH=73% CO2=586 NH3=1228.388 H2S=1382.516 VOC=31277 -> low S=1 [offline][0m
+[0;32mI (257667) FSM: T=30.3C RH=73% CO2=583 NH3=1208.804 H2S=1307.395 VOC=31278 -> low S=2 [offline][0m
+[0;32mI (262667) FSM: T=30.2C RH=73% CO2=580 NH3=1217.769 H2S=1344.557 VOC=31283 -> low S=2 [offline][0m
+[0;33mW (267037) WIFI: Mất kết nối 'Lâm Hoàng', lý do 201[0m
+[0;32mI (268667) FSM: T=30.2C RH=73% CO2=576 NH3=1229.920 H2S=1339.125 VOC=31287 -> low S=2 [offline][0m
+[0;32mI (273667) FSM: T=30.2C RH=73% CO2=575 NH3=1228.388 H2S=1368.592 VOC=31287 -> low S=1 [offline][0m
+[0;32mI (278667) FSM: T=30.2C RH=73% CO2=578 NH3=1217.769 H2S=1391.519 VOC=31292 -> low S=1 [offline][0m
+[0;32mI (283667) FSM: T=30.2C RH=73% CO2=575 NH3=1212.275 H2S=1379.328 VOC=31289 -> low S=1 [offline][0m
+[0;32mI (288667) FSM: T=30.2C RH=73% CO2=573 NH3=1210.785 H2S=1365.465 VOC=31287 -> low S=1 [offline][0m
+[0;32mI (293667) FSM: T=30.2C RH=73% CO2=573 NH3=1241.783 H2S=1372.993 VOC=31288 -> low S=1 [offline][0m
+[0;32mI (298667) FSM: T=30.2C RH=73% CO2=570 NH3=1221.793 H2S=1381.239 VOC=31290 -> low S=1 [offline][0m
+[0;32mI (303667) FSM: T=30.2C RH=73% CO2=568 NH3=1226.860 H2S=1356.165 VOC=31289 -> low S=1 [offline][0m
+[0;32mI (308667) FSM: T=30.2C RH=73% CO2=566 NH3=1248.586 H2S=1327.203 VOC=31290 -> low S=2 [offline][0m
+[0;32mI (313667) FSM: T=30.2C RH=73% CO2=568 NH3=1208.804 H2S=1382.516 VOC=31295 -> low S=1 [offline][0m
+[0;32mI (318667) FSM: T=30.2C RH=73% CO2=566 NH3=1229.920 H2S=1358.633 VOC=31285 -> low S=1 [offline][0m
+[0;32mI (323667) FSM: T=30.2C RH=73% CO2=566 NH3=1234.536 H2S=1343.347 VOC=31288 -> low S=2 [offline][0m
+[0;32mI (329667) FSM: T=30.2C RH=73% CO2=561 NH3=1237.115 H2S=1402.603 VOC=31289 -> low S=1 [offline][0m
+[0;33mW (329867) WIFI: Mất kết nối 'Lâm Hoàng', lý do 201[0m
+[0;32mI (334667) FSM: T=30.2C RH=73% CO2=560 NH3=1234.536 H2S=1369.219 VOC=31288 -> low S=1 [offline][0m
+[0;32mI (339667) FSM: T=30.2C RH=73% CO2=559 NH3=1236.599 H2S=1384.436 VOC=31287 -> low S=1 [offline][0m
+[0;32mI (344667) FSM: T=30.2C RH=73% CO2=558 NH3=1248.586 H2S=1426.643 VOC=31291 -> low S=1 [offline][0m
+[0;32mI (349667) FSM: T=30.2C RH=73% CO2=557 NH3=1244.391 H2S=1390.226 VOC=31293 -> low S=1 [offline][0m
+[0;32mI (354667) FSM: T=30.2C RH=73% CO2=555 NH3=1255.460 H2S=1416.531 VOC=31289 -> low S=1 [offline][0m
+[0;32mI (359667) FSM: T=30.2C RH=73% CO2=558 NH3=1220.785 H2S=1371.104 VOC=31298 -> low S=1 [offline][0m
+[0;32mI (364667) FSM: T=30.2C RH=73% CO2=556 NH3=1230.943 H2S=1372.363 VOC=31295 -> low S=1 [offline][0m
+[0;32mI (369667) FSM: T=30.2C RH=73% CO2=553 NH3=1260.261 H2S=1366.089 VOC=31297 -> low S=1 [offline][0m
+[0;32mI (374667) FSM: T=30.2C RH=73% CO2=552 NH3=1243.347 H2S=1339.727 VOC=31291 -> low S=2 [offline][0m
+[0;32mI (379667) FSM: T=30.2C RH=73% CO2=552 NH3=1242.825 H2S=1388.935 VOC=31291 -> low S=1 [offline][0m
+[0;32mI (384667) FSM: T=30.2C RH=73% CO2=553 NH3=1251.221 H2S=1389.580 VOC=31290 -> low S=1 [offline][0m
+[0;32mI (389667) FSM: T=30.2C RH=73% CO2=553 NH3=1261.869 H2S=1369.219 VOC=31290 -> low S=1 [offline][0m
+[0;33mW (392707) WIFI: Mất kết nối 'Lâm Hoàng', lý do 201[0m
+[0;32mI (394667) FSM: T=30.3C RH=73% CO2=553 NH3=1280.373 H2S=1397.366 VOC=31287 -> low S=1 [offline][0m
+[0;32mI (399667) FSM: T=30.3C RH=73% CO2=550 NH3=1272.146 H2S=1404.577 VOC=31291 -> low S=1 [offline][0m
+[0;32mI (404667) FSM: T=30.2C RH=73% CO2=549 NH3=1240.224 H2S=1386.361 VOC=31299 -> low S=1 [offline][0m
+[0;32mI (409667) FSM: T=30.1C RH=73% CO2=550 NH3=1236.082 H2S=1399.980 VOC=31287 -> low S=1 [offline][0m
+[0;32mI (414667) FSM: T=30.0C RH=73% CO2=551 NH3=1247.535 H2S=1378.692 VOC=31288 -> low S=1 [offline][0m
+[0;32mI (419667) FSM: T=29.9C RH=73% CO2=549 NH3=1239.186 H2S=1383.795 VOC=31294 -> low S=1 [offline][0m
+[0;32mI (424667) FSM: T=29.9C RH=73% CO2=548 NH3=1245.437 H2S=1399.325 VOC=31299 -> low S=1 [offline][0m
+[0;32mI (429667) FSM: T=30.0C RH=73% CO2=549 NH3=1228.388 H2S=1384.436 VOC=31305 -> low S=1 [offline][0m
+[0;32mI (434667) FSM: T=30.0C RH=73% CO2=550 NH3=1254.397 H2S=1398.018 VOC=31304 -> low S=1 [offline][0m
+[0;32mI (439667) FSM: T=30.0C RH=73% CO2=549 NH3=1246.485 H2S=1390.226 VOC=31302 -> low S=1 [offline][0m
+[0;32mI (444667) FSM: T=30.0C RH=73% CO2=549 NH3=1255.991 H2S=1419.886 VOC=31292 -> low S=1 [offline][0m
+[0;32mI (449667) FSM: T=30.0C RH=73% CO2=550 NH3=1244.391 H2S=1348.812 VOC=31294 -> low S=2 [offline][0m
+[0;33mW (455547) WIFI: Mất kết nối 'Lâm Hoàng', lý do 201[0m
+[0;32mI (455667) FSM: T=30.0C RH=73% CO2=551 NH3=1287.028 H2S=1436.894 VOC=31282 -> low S=1 [offline][0m
+[0;32mI (460667) FSM: T=30.0C RH=73% CO2=551 NH3=1249.112 H2S=1399.325 VOC=31291 -> low S=1 [offline][0m
