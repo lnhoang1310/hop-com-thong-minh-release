@@ -55,7 +55,7 @@
 #define MQ137_CURVE_A 102.2f
 #define MQ137_CURVE_B (-2.473f)
 
-#define MQ_WARMUP_TIME_S   200     /* thời gian làm nóng cảm biến MQ khi bật nguồn */
+#define MQ_WARMUP_TIME_S   120     /* thời gian làm nóng cảm biến MQ khi bật nguồn */
 
 /* ============================== Thời gian ============================== */
 #define SENSOR_READ_PERIOD_MS  1000

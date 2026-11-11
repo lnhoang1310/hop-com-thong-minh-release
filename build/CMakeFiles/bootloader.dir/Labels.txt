@@ -1,13 +1,13 @@
 # Target labels
  bootloader
 # Source files and their labels
-D:/PROJECT/KHKT/hop_com_thong_minh/build/CMakeFiles/bootloader
-D:/PROJECT/KHKT/hop_com_thong_minh/build/CMakeFiles/bootloader.rule
-D:/PROJECT/KHKT/hop_com_thong_minh/build/CMakeFiles/bootloader-complete.rule
-D:/PROJECT/KHKT/hop_com_thong_minh/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
-D:/PROJECT/KHKT/hop_com_thong_minh/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
-D:/PROJECT/KHKT/hop_com_thong_minh/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
-D:/PROJECT/KHKT/hop_com_thong_minh/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
-D:/PROJECT/KHKT/hop_com_thong_minh/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
-D:/PROJECT/KHKT/hop_com_thong_minh/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
-D:/PROJECT/KHKT/hop_com_thong_minh/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
+C:/Users/NTN27/Desktop/KHKT/KHKT/hop_com_thong_minh/build/CMakeFiles/bootloader
+C:/Users/NTN27/Desktop/KHKT/KHKT/hop_com_thong_minh/build/CMakeFiles/bootloader.rule
+C:/Users/NTN27/Desktop/KHKT/KHKT/hop_com_thong_minh/build/CMakeFiles/bootloader-complete.rule
+C:/Users/NTN27/Desktop/KHKT/KHKT/hop_com_thong_minh/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+C:/Users/NTN27/Desktop/KHKT/KHKT/hop_com_thong_minh/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+C:/Users/NTN27/Desktop/KHKT/KHKT/hop_com_thong_minh/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+C:/Users/NTN27/Desktop/KHKT/KHKT/hop_com_thong_minh/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+C:/Users/NTN27/Desktop/KHKT/KHKT/hop_com_thong_minh/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+C:/Users/NTN27/Desktop/KHKT/KHKT/hop_com_thong_minh/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+C:/Users/NTN27/Desktop/KHKT/KHKT/hop_com_thong_minh/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

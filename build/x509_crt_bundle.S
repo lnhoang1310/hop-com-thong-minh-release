@@ -1,4 +1,4 @@
-/* * Data converted from D:/PROJECT/KHKT/hop_com_thong_minh/build/esp-idf/mbedtls/x509_crt_bundle
+/* * Data converted from C:/Users/NTN27/Desktop/KHKT/KHKT/hop_com_thong_minh/build/esp-idf/mbedtls/x509_crt_bundle
  */
 .data
 #if !defined (__APPLE__) && !defined (__linux__)

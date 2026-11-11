@@ -1,4 +1,4 @@
-/* * Data converted from D:/PROJECT/KHKT/hop_com_thong_minh/component/embedded_files/wifi_setting.css
+/* * Data converted from C:/Users/NTN27/Desktop/KHKT/KHKT/hop_com_thong_minh/component/embedded_files/wifi_setting.css
  * (null byte appended)
  */
 .data

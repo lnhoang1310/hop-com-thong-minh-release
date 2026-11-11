@@ -1,4 +1,4 @@
-# Install script for directory: C:/Espressif/frameworks/esp-idf-v5.5.1/components/mbedtls
+# Install script for directory: E:/Espressif/frameworks/esp-idf-v5.5.1/components/mbedtls
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,11 +34,11 @@ endif()
 
 # Set path to fallback-tool for dependency-resolution.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "C:/Espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-objdump.exe")
+  set(CMAKE_OBJDUMP "E:/Espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-objdump.exe")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("D:/PROJECT/KHKT/hop_com_thong_minh/build/esp-idf/mbedtls/mbedtls/cmake_install.cmake")
+  include("C:/Users/NTN27/Desktop/KHKT/KHKT/hop_com_thong_minh/build/esp-idf/mbedtls/mbedtls/cmake_install.cmake")
 endif()
 

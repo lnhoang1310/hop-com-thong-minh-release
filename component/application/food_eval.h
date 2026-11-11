@@ -17,8 +17,12 @@
  * 5) Mức thời gian (USDA FSIS, FDA Food Code, FSS): quỹ 120 phút, x2 khi > 32 °C
  * 6) Mức cuối = max(mức khí, mức thời gian)
  * 7) Trạng thái nhiệt (nóng / đang nguội / đã nguội / lạnh) từ nhiệt độ trong hộp và độ dốc
- *    3 phút gần nhất. Mẫu nền chỉ được lấy khi đã nguội ổn định (hoặc lạnh) >= 2 phút, để hơi
- *    nóng bốc lên lúc đầu không bị tính là "khí nền" (tối đa chờ 60 phút).
+ *    3 phút gần nhất (chỉ để hiển thị / gửi server). Mẫu nền được lấy ngay khi bắt đầu phiên
+ *    mới, không phụ thuộc thức ăn nóng hay nguội.
+ * 8) Bám nền xuống: trong FOOD_BASE_TRACK_MAX_S đầu phiên, nếu số đo đã lọc (EMA, hằng số
+ *    thời gian FOOD_BASE_TRACK_TAU_S) sạch hơn nền thì hạ nền xuống bằng số đo đó. Nhờ vậy nền
+ *    lấy lúc thức ăn còn nóng (khí cao) sẽ tự về mức của thức ăn đã nguội. Thức ăn hỏng chỉ làm
+ *    khí tăng nên việc hạ nền không che mất dấu hiệu hỏng.
  * Trọng số, T1, T2 lấy từ báo cáo (giả thuyết ban đầu, cần hiệu chỉnh bằng thực nghiệm).
  */
 #include "food_types.h"
@@ -42,9 +46,9 @@ extern "C" {
 #define FOOD_HYSTERESIS        3
 
 /* ---- Lấy mẫu nền ---- */
-#define FOOD_BASELINE_SAMPLES  10
-#define FOOD_BASE_STABLE_S     120      /* đã nguội ổn định bao lâu thì bắt đầu lấy nền */
-#define FOOD_BASE_WAIT_MAX_S   3600     /* chờ nguội tối đa, quá thì lấy nền luôn */
+#define FOOD_BASELINE_SAMPLES  30
+#define FOOD_BASE_TRACK_TAU_S  300           /* lọc EMA 5 phút: mở nắp / nhiễu ngắn không kéo nền xuống */
+#define FOOD_BASE_TRACK_MAX_S  (3 * 3600)    /* chỉ bám nền xuống trong 3 giờ đầu phiên (đủ để nguội) */
 
 /* ---- Trạng thái nhiệt (nhiệt độ KHÔNG KHÍ trong hộp, cần hiệu chỉnh bằng thực nghiệm) ---- */
 #define FOOD_THERMAL_HOT_C          45.0f   /* >= : đang nóng */

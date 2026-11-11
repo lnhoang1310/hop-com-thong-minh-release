@@ -27,7 +27,7 @@ import uuid
 import paho.mqtt.client as mqtt
 
 ROOT = "hopcom-khkt2026"   # đổi bằng --root; phải giống MQTT_TOPIC_ROOT của firmware
-CSV_FILE = "du_lieu_do.csv"
+CSV_FILE = r"E:\KHKT\du_lieu_do.csv"   # đổi bằng --csv
 COLUMNS = ["food", "age_s", "budget_s", "t", "rh", "thermal", "slope", "co2", "voc", "nh3", "h2s",
            "score", "gas_level", "time_level", "level", "msg"]
 
@@ -85,8 +85,9 @@ def send_cmd(c, cmd, kv):
 
 
 def main():
-    global ROOT
+    global ROOT, CSV_FILE
     ap = argparse.ArgumentParser(description="Server mẫu Hộp cơm thông minh")
+    ap.add_argument("--csv", default=CSV_FILE, help="file CSV ghi dữ liệu đo")
     ap.add_argument("--broker", default="broker.hivemq.com")
     ap.add_argument("--port", type=int, default=1883)
     ap.add_argument("--root", default=ROOT, help="topic gốc, giống MQTT_TOPIC_ROOT trong app_config.h")
@@ -96,6 +97,9 @@ def main():
                     help="gửi lệnh rồi thoát, vd: --cmd set_food food=ca")
     a = ap.parse_args()
     ROOT = a.root
+    CSV_FILE = a.csv
+    if os.path.dirname(CSV_FILE):
+        os.makedirs(os.path.dirname(CSV_FILE), exist_ok=True)
     print(f"[server] broker {a.broker}:{a.port}, topic gốc '{ROOT}'")
 
     c = make_client(a.broker, a.port, a.user, a.password)
